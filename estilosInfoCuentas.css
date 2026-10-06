@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f5f7;
+    color: #172b4d;
+}
+
+.account-container{
+    display: flex;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.account-content{
+    flex: 1;
+}
+
+.account-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    height: fit-content;
+}
+
+.account-sidebar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #111111;
+}
+
+.account-sidebar ul {
+    list-style: none;
+}
+
+.account-sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.account-sidebar a {
+    display: block;
+    padding: 0.7rem 1rem;
+    color: #4a5568;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.account-sidebar a:hover {
+    background-color: #f7fafc;
+    color: #e0006c;
+}
+
+#mis-datos, 
+#mis-favoritos {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 2rem;
+}
+
+#mis-datos h2, 
+#mis-favoritos h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: #111111;
+    border-bottom: 2px solid #f4f5f7;
+    padding-bottom: 0.5rem;
+}
+
+.favoritos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.evento-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background-color: #fff;
+}
+
+.evento-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Espaciado de cada campo */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+    max-width: 500px; /* Limita el ancho para que no se estire demasiado */
+}
+
+.form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333333;
+}
+
+.form-group input {
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    background-color: #fbfbfb;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #0052cc;
+    background-color: #ffffff;
+}
+
+#mis-datos button[type="submit"] {
+    background-color: #e0006c;
+    color: #ffffff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#mis-datos button[type="submit"]:hover {
+    background-color: #b80058;
+}
+
+.evento-card button {
+    background-color: #172b4d;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.evento-card label {
+    font-size: 0.85rem;
+    color: #666666;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+}
+
+/* Estilos para el cuenta admin */
+/* Encabezado con botón de creación */
+.admin-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #f4f5f7;
+    padding-bottom: 0.5rem;
+}
+
+.btn-crear {
+    background-color: #e0006c;
+    color: #ffffff;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Tarjeta Admin con posicionamiento para la etiqueta de estado */
+.admin-card {
+    position: relative;
+}
+
+/* Etiquetas de estado (Activo / Agotado) */
+.badge-status {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 3px;
+    color: #ffffff;
+}
+
+.badge-status.activo {
+    background-color: #2e7d32; /* Verde */
+}
+
+.badge-status.agotado {
+    background-color: #c62828; /* Rojo */
+}
+
+/* Datos de ventas */
+.evento-info {
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+.evento-ventas {
+    font-size: 0.9rem;
+    color: #172b4d;
+}
+
+/* Botones de Editar / Eliminar */
+.admin-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.btn-edit {
+    flex: 1;
+    background-color: #f4f5f7;
+    color: #172b4d;
+    border: 1px solid #dcdcdc;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: #fff0f0;
+    color: #d32f2f;
+    border: 1px solid #ffcdd2;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-edit:hover {
+    background-color: #e2e8f0;
+}
+
+.btn-delete:hover {
+    background-color: #ffe5e5;
+}
+
+/* Estilos para el formulario de registro de cuentas */
+/*
+.auth-buttons-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.auth-buttons-group .btn-submit {
+    flex: 1;
+}
+
+.btn-admin {
+    background-color: #172b4d; /* Color oscuro diferenciador para el Admin 
+}
+
+.btn-admin:hover {
+    background-color: #0f1c32;
+}
+
+@media screen and (max-width: 600px) {
+    .auth-buttons-group {
+        flex-direction: column;
+    }
+}
+*/

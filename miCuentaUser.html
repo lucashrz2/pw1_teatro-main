@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Datos</title>
+    <link rel="stylesheet" href="estilosInfoCuentas.css">
+</head>
+<body>
+    <main class="account-container">
+        <aside class="account-sidebar">
+            <h2>Mi Cuenta</h2>
+            <ul>
+                <li><a href="#">Mis Datos</a></li>
+                <li><a href="#">Mis favoritos</a></li>
+                <li><a href="#">Mis Compras</a></li>
+                <li><a href="#">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+
+       <div class="account-content">
+        <section id="mis-datos">
+            <h2>datos personales</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" value="Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" value="Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="juan.perez@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" value="+54 9 11 1234-5678" required>
+                </div>
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </section>
+
+        <section id="mis-favoritos">
+            <h2>Mis Favoritos</h2>
+
+         <div class="favoritos-grid">
+            <article class="evento-card">
+                <img src="ruta/a/imagen1.jpg" alt="Obra 1">
+                <h3>Obra 1</h3>
+                <p>Descripción de la obra 1.</p>
+                <button>Comprar Entrada</button>
+                <label>
+                    <input type="checkbox" name="favorito" value="1" checked>
+                    quitar de favoritos
+                </label>
+            </article>
+        </div>
+
+        </section>
+    </div>
+    </main>
+</body>
+</html>

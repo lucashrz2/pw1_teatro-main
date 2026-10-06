@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicket | Todo el teatro para vos</title>
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Estilos Principales -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ================= HERO WRAPPER (HEADER FLOTANTE + BANNER) ================= -->
+    <div class="hero-wrapper">
+        
+        <!-- Header flotante transparente -->
+        <header class="main-header">
+            <div class="header-container">
+                
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html"><h2>Clicket</h2></a>
+                </div>
+
+                <!-- Menú de Navegación Central -->
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html" class="active">Obras</a></li>
+                        <li><a href="#">Teatros</a></li>
+                        <li><a href="#">Eticket</a></li>
+                        <li><a href="#">Promociones</a></li>
+                        <li><a href="cuenta-usuario.html">Mi Cuenta</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Cápsula de Autenticación (Login / Registro) -->
+                <div class="auth-pill-container">
+                    <a href="login.html" class="btn-pill-login">Iniciar sesión</a>
+                    <a href="registroCuentas.html" class="btn-pill-register">Crear cuenta</a>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- Hero Banner con Filtros Horizontales Integrados -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Obras y Eventos</h1>
+                
+                <!-- Barra de Filtros en Línea -->
+                <div class="hero-filters-bar">
+                    
+                    <!-- Campo de Búsqueda -->
+                    <div class="filter-box">
+                        <label for="search-input">Buscar obra</label>
+                        <div class="input-with-icon">
+                            <input type="text" id="search-input" placeholder="¿Qué querés ver?">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+
+                    <!-- Filtro de Categorías -->
+                    <div class="filter-box">
+                        <label for="category-select">Categoría</label>
+                        <select id="category-select">
+                            <option value="">Todas</option>
+                            <option value="destacadas">Destacadas</option>
+                            <option value="comedia">Comedia</option>
+                            <option value="drama">Drama</option>
+                            <option value="opera">Ópera</option>
+                            <option value="musical">Musical</option>
+                            <option value="recital">Recital</option>
+                            <option value="standup">Stand Up</option>
+                            <option value="infantiles">Infantiles</option>
+                        </select>
+                    </div>
+
+                    <!-- Filtro de Zona / Teatro -->
+                    <div class="filter-box">
+                        <label for="zone-select">Zona / Teatro</label>
+                        <select id="zone-select">
+                            <option value="">Todos</option>
+                            <option value="lanus">Lanús</option>
+                            <option value="almagro">Almagro</option>
+                            <option value="palermo">Palermo</option>
+                            <option value="haedo">Haedo</option>
+                            <option value="sanjusto">San Justo</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ================= CONTENIDO PRINCIPAL ================= -->
+    <main class="container main-layout">
+
+        <!-- Sección de Catálogo / Ítems -->
+        <section class="catalog-section">
+            <div class="catalog-header">
+                <h2>Obras y Eventos Destacados</h2>
+                <div class="view-toggle-buttons">
+                    <button class="view-btn active" title="Vista Tarjetas"><i class="fa-solid fa-grip"></i></button>
+                    <button class="view-btn" title="Vista Lista"><i class="fa-solid fa-list"></i></button>
+                </div>
+            </div>
+
+            <!-- Grilla de Tarjetas -->
+            <div class="items-grid">
+                <article class="card">
+                    <div class="card-img-container">
+                        <img src="https://via.placeholder.com/300x400" alt="Obra de teatro">
+                        <span class="tag-badge">Destacada</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="location">CABA • Teatro Corrientes</span>
+                        <h3>Gran Estreno Teatral 2026</h3>
+                        <p class="price">Desde $ 60.000 ARS</p>
+                        <div class="card-footer-actions">
+                            <a href="#" class="btn-card">Comprar Entradas</a>
+                            <button class="fav-icon-btn"><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-container">
+                        <img src="https://via.placeholder.com/300x400" alt="Recital">
+                        <span class="tag-badge">Musical</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="location">CABA • Teatro Gran Rex</span>
+                        <h3>Concierto Acústico en Vivo</h3>
+                        <p class="price">Desde $ 45.000 ARS</p>
+                        <div class="card-footer-actions">
+                            <a href="#" class="btn-card">Comprar Entradas</a>
+                            <button class="fav-icon-btn active"><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img-container">
+                        <img src="https://via.placeholder.com/300x400" alt="Comedia">
+                    </div>
+                    <div class="card-body">
+                        <span class="location">Mar del Plata • Teatro Roxy</span>
+                        <h3>Comedia de Verano</h3>
+                        <p class="price">Desde $ 50.000 ARS</p>
+                        <div class="card-footer-actions">
+                            <a href="#" class="btn-card">Comprar Entradas</a>
+                            <button class="fav-icon-btn"><i class="fa-solid fa-heart"></i></button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div>
+                <h4>Clicket</h4>
+                <p>Todo el teatro para vos en un solo lugar.</p>
+            </div>
+            <div>
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#">Cómo comprar</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legales</h4>
+                <ul>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Botón de Arrepentimiento</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2007-2026 Clicket S.A. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

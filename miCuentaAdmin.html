@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Datos</title>
+    <link rel="stylesheet" href="estilosInfoCuentas.css">
+</head>
+<body>
+    <main class="account-container">
+        <aside class="account-sidebar">
+            <h2>Panel Admin</h2>
+            <ul>
+                <li><a href="#">Mis Datos</a></li>
+                <li><a href="#">Obras Publicadas</a></li>
+                <li><a href="#">Publicar Nuevo Evento</a></li>
+                <li><a href="#">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+
+       <div class="account-content">
+        <section id="mis-datos">
+            <h2>datos personales</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" value="Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" value="Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="juan.perez@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" value="+54 9 11 1234-5678" required>
+                </div>
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </section>
+
+       <section id="obras-publicadas">
+    <div class="admin-section-header">
+        <h2>Obras y Eventos Publicados</h2>
+        <a href="#" class="btn-crear">+ Crear Nuevo Evento</a>
+    </div>
+
+    <div class="favoritos-grid">
+        
+        <!-- Tarjeta de Evento 1 -->
+        <article class="evento-card admin-card">
+            <span class="badge-status activo">Activo</span>
+            <img src="ruta/a/imagen1.jpg" alt="Gran Estreno Teatral 2026">
+            <h3>Gran Estreno Teatral 2026</h3>
+            <p class="evento-info">CABA • Teatro Corrientes</p>
+            <p class="evento-ventas"><strong>150 / 200</strong> entradas vendidas</p>
+            
+            <div class="admin-actions">
+                <button class="btn-edit">Editar</button>
+                <button class="btn-delete">Eliminar</button>
+            </div>
+        </article>
+
+        <!-- Tarjeta de Evento 2 -->
+        <article class="evento-card admin-card">
+            <span class="badge-status agotado">Agotado</span>
+            <img src="ruta/a/imagen2.jpg" alt="Concierto Acústico">
+            <h3>Concierto Acústico en Vivo</h3>
+            <p class="evento-info">CABA • Teatro Gran Rex</p>
+            <p class="evento-ventas"><strong>300 / 300</strong> entradas vendidas</p>
+            
+            <div class="admin-actions">
+                <button class="btn-edit">Editar</button>
+                <button class="btn-delete">Eliminar</button>
+            </div>
+        </article>
+
+    </div>
+        </section>
+    </div>
+    </main>
+</body>
+</html>
