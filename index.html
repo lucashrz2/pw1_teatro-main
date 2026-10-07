@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clicket | Todo el teatro para vos</title>
     <!-- Iconos de Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="fonts/FONT-Dancing_Script,Inter,Poppins/Poppins/Poppins-Black.ttf">
+    <link rel="stylesheet" href="fonts/FONT-Dancing_Script,Inter,Poppins/Dancing_Script/DancingScript-VariableFont_wght.ttf">
+    <link rel="stylesheet" href="fonts/FONT-Dancing_Script,Inter,Poppins/Inter/Inter-Italic-VariableFont_opsz,wght.ttf">
+    <link rel="stylesheet" href="img/carrito.png">
+    <link rel="stylesheet" href="img/corazon.png">
     <!-- Estilos Principales -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -33,21 +37,31 @@
                         <li><a href="cuenta-usuario.html">Mi Cuenta</a></li>
                     </ul>
                 </nav>
+<!-- Acciones del Header (Carrito + Login / Registro) -->
+<div class="header-actions">
+    
+    <!-- Botón del Carrito -->
+    <a href="#" class="cart-btn" title="Carrito de compras">
+<img src="img/carrito.png" alt="Carrito" class="icon-img">    </a>
 
-                <!-- Cápsula de Autenticación (Login / Registro) -->
-                <div class="auth-pill-container">
-                    <a href="login.html" class="btn-pill-login">Iniciar sesión</a>
-                    <a href="registroCuentas.html" class="btn-pill-register">Crear cuenta</a>
-                </div>
+    <!-- Cápsula de Autenticación (Login / Registro) -->
+    <div class="auth-pill-container">
+        <a href="login.html" class="btn-pill-login">Iniciar sesión</a>
+        <a href="registroCuentas.html" class="btn-pill-register">Crear cuenta</a>
+    </div>
 
-            </div>
+</div>
         </header>
 
         <!-- Hero Banner con Filtros Horizontales Integrados -->
         <section class="hero-section">
             <div class="hero-content">
-                <h1>Obras y Eventos</h1>
-                
+                <h1 class="hero-title">Vivi una 
+                <br>
+                <span class="hero-highlight">experiencia</span> 
+                <br>
+                única en Clicket
+                </h1>
                 <!-- Barra de Filtros en Línea -->
                 <div class="hero-filters-bar">
                     
@@ -83,7 +97,7 @@
                         <label for="zone-select">Zona / Teatro</label>
                         <select id="zone-select">
                             <option value="">Todos</option>
-                            <option value="Lanus">Lanús</option>
+                            <option value="lanus">Lanús</option>
                             <option value="Almagro">Almagro</option>
                             <option value="Palermo">Palermo</option>
                             <option value="Haedo">Haedo</option>
@@ -110,56 +124,234 @@
                 </div>
             </div>
 
-            <!-- Grilla de Tarjetas -->
-            <div class="items-grid">
-                <article class="card">
-                    <div class="card-img-container">
-                        <img src="https://via.placeholder.com/300x400" alt="Obra de teatro">
-                        <span class="tag-badge">Destacada</span>
-                    </div>
-                    <div class="card-body">
-                        <span class="location">CABA • Teatro Corrientes</span>
-                        <h3>Gran Estreno Teatral 2026</h3>
-                        <p class="price">Desde $ 60.000 ARS</p>
-                        <div class="card-footer-actions">
-                            <a href="#" class="btn-card">Comprar Entradas</a>
-                            <button class="fav-icon-btn"><i class="fa-solid fa-heart"></i></button>
-                        </div>
-                    </div>
-                </article>
+<!-- Grilla de Tarjetas 3x3 (9 Obras/Eventos) -->
+<div class="items-grid">
 
-                <article class="card">
-                    <div class="card-img-container">
-                        <img src="https://via.placeholder.com/300x400" alt="Recital">
-                        <span class="tag-badge">Musical</span>
-                    </div>
-                    <div class="card-body">
-                        <span class="location">CABA • Teatro Gran Rex</span>
-                        <h3>Concierto Acústico en Vivo</h3>
-                        <p class="price">Desde $ 45.000 ARS</p>
-                        <div class="card-footer-actions">
-                            <a href="#" class="btn-card">Comprar Entradas</a>
-                            <button class="fav-icon-btn active"><i class="fa-solid fa-heart"></i></button>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-img-container">
-                        <img src="https://via.placeholder.com/300x400" alt="Comedia">
-                    </div>
-                    <div class="card-body">
-                        <span class="location">Mar del Plata • Teatro Roxy</span>
-                        <h3>Comedia de Verano</h3>
-                        <p class="price">Desde $ 50.000 ARS</p>
-                        <div class="card-footer-actions">
-                            <a href="#" class="btn-card">Comprar Entradas</a>
-                            <button class="fav-icon-btn"><i class="fa-solid fa-heart"></i></button>
-                        </div>
-                    </div>
-                </article>
+    <!-- Tarjeta 1 -->
+   <article class="card">
+        <div class="card-img-container">
+            <img src="https://picsum.photos/id/1025/1600/1066" alt="Gran Estreno Teatral">
+            <span class="tag-badge">Destacada</span>
+        </div>
+        <div class="card-body">
+            <span class="location">CABA • Teatro Corrientes</span>
+            <h3>Gran Estreno Teatral 2026</h3>
+            <p class="price">Desde $ 60.000 ARS</p>
+            <div class="card-footer-actions">
+                <a href="#" class="btn-card">Comprar Entradas</a>
+                <button class="fav-icon-btn">
+    <img src="img/corazon.png" alt="Favorito" class="icon-img">
+</button>
             </div>
-        </section>
+        </div>
+    </article>
+
+    <!-- Tarjeta 2 -->
+    <article class="card">
+        <div class="card-img-container">
+            <img src="https://picsum.photos/id/1084/1600/1066" alt="Concierto Acústico">
+            <span class="tag-badge">Musical</span>
+        </div>
+        <div class="card-body">
+            <span class="location">CABA • Teatro Gran Rex</span>
+            <h3>Concierto Acústico en Vivo</h3>
+            <p class="price">Desde $ 45.000 ARS</p>
+            <div class="card-footer-actions">
+                <a href="#" class="btn-card">Comprar Entradas</a>
+                <button class="fav-icon-btn">
+    <img src="img/corazon.png" alt="Favorito" class="icon-img">
+</button>
+            </div>
+        </div>
+    </article>
+
+    <!-- Tarjeta 3 -->
+    <article class="card">
+        <div class="card-img-container">
+            <img src="https://picsum.photos/id/1062/1600/1066" alt="Comedia de Verano">
+            <span class="tag-badge">Comedia</span>
+        </div>
+        <div class="card-body">
+            <span class="location">Mar del Plata • Teatro Roxy</span>
+            <h3>Comedia de Verano</h3>
+            <p class="price">Desde $ 50.000 ARS</p>
+            <div class="card-footer-actions">
+                <a href="#" class="btn-card">Comprar Entradas</a>
+                  <button class="fav-icon-btn">
+    <img src="img/corazon.png" alt="Favorito" class="icon-img">
+</button>
+        </div>
+    </article>
+
+    <!-- Tarjeta 4 -->
+    <article class="card">
+        <div class="card-img-container">
+            <img src="https://picsum.photos/id/158/1600/1066" alt="Noche de Stand Up">
+            <span class="tag-badge">Stand Up</span>
+        </div>
+        <div class="card-body">
+            <span class="location">Palermo • Club de la Comedia</span>
+            <h3>Noche de Stand Up</h3>
+            <p class="price">Desde $ 35.000 ARS</p>
+            <div class="card-footer-actions">
+                <a href="#" class="btn-card">Comprar Entradas</a>
+                <button class="fav-icon-btn">
+    <img src="img/corazon.png" alt="Favorito" class="icon-img">
+</button>
+            </div>
+        </div>
+    </article>
+
+    <!-- Tarjeta 5 -->
+    <article class="card">
+        <div class="card-img-container">
+            <img src="https://picsum.photos/id/453/1600/1066" alt="Drama Clásico">
+            <span class="tag-badge">Drama</span>
+        </div>
+        <div class="card-body">
+            <span class="location">CABA • Teatro San Martín</span>
+            <h3>Drama Clásico en 3 Actos</h3>
+            <p class="price">Desde $ 40.000 ARS</p>
+            <div class="card-footer-actions">
+                <a href="#" class="btn-card">Comprar Entradas</a>
+                 <button class="fav-icon-btn">
+    <img src="img/corazon.png" alt="Favorito" class="icon-img">
+</button>
+        </div>
+    </article>
+
+    <!-- Tarjeta 6 -->
+    <article class="card">
+        <div class="card-img-container">
+            <img src="https://picsum.photos/id/342/1600/1066" alt="Gala de Ópera">
+            <span class="tag-badge">Ópera</span>
+        </div>
+        <div class="card-body">
+            <span class="location">CABA • Teatro Colón</span>
+            <h3>Gala de Ópera e Orquesta</h3>
+            <p class="price">Desde $ 85.000 ARS</p>
+            <div class="card-footer-actions">
+                <a href="#" class="btn-card">Comprar Entradas</a>
+                <button class="fav-icon-btn">
+    <img src="img/corazon.png" alt="Favorito" class="icon-img">
+</button>
+            </div>
+        </div>
+    </article>
+
+    <!-- Tarjeta 7 -->
+    <article class="card">
+        <div class="card-img-container">
+            <img src="https://picsum.photos/id/1070/1600/1066" alt="Aventura Infantil">
+            <span class="tag-badge">Infantil</span>
+        </div>
+        <div class="card-body">
+            <span class="location">San Justo • Teatro Italia</span>
+            <h3>Aventura Mágica Infantil</h3>
+            <p class="price">Desde $ 30.000 ARS</p>
+            <div class="card-footer-actions">
+                <a href="#" class="btn-card">Comprar Entradas</a>
+                 <button class="fav-icon-btn">
+    <img src="img/corazon.png" alt="Favorito" class="icon-img">
+</button>
+            </div>
+        </div>
+    </article>
+
+    <!-- Tarjeta 8 -->
+    <article class="card">
+        <div class="card-img-container">
+            <img src="https://picsum.photos/id/1059/1600/1066" alt="Monólogo Intimista">
+            <span class="tag-badge">Monólogo</span>
+        </div>
+        <div class="card-body">
+            <span class="location">Almagro • Teatro Picadero</span>
+            <h3>Monólogo de Una Vida</h3>
+            <p class="price">Desde $ 38.000 ARS</p>
+            <div class="card-footer-actions">
+                <a href="#" class="btn-card">Comprar Entradas</a>
+                 <button class="fav-icon-btn">
+    <img src="img/corazon.png" alt="Favorito" class="icon-img">
+</button>
+            </div>
+        </div>
+    </article>
+
+    <!-- Tarjeta 9 -->
+    <article class="card">
+        <div class="card-img-container">
+            <img src="https://picsum.photos/id/1069/1600/1066" alt="Festival de Jazz">
+            <span class="tag-badge">Recital</span>
+        </div>
+        <div class="card-body">
+            <span class="location">Lanús • Centro Cultural</span>
+            <h3>Festival de Jazz & Blues</h3>
+            <p class="price">Desde $ 42.000 ARS</p>
+            <div class="card-footer-actions">
+                <a href="#" class="btn-card">Comprar Entradas</a>
+                  <button class="fav-icon-btn">
+    <img src="img/corazon.png" alt="Favorito" class="icon-img">
+</button>
+            </div>
+        </div>
+    </article>
+    
+    <!-- Tarjeta 9 -->
+    <article class="card">
+        <div class="card-img-container">
+            <img src="https://picsum.photos/id/1069/1600/1066" alt="Festival de Jazz">
+            <span class="tag-badge">Recital</span>
+        </div>
+        <div class="card-body">
+            <span class="location">Lanús • Centro Cultural</span>
+            <h3>Festival de Jazz & Blues</h3>
+            <p class="price">Desde $ 42.000 ARS</p>
+            <div class="card-footer-actions">
+                <button class="fav-icon-btn">
+    <img src="img/corazon.png" alt="Favorito" class="icon-img">
+</button>
+            </div>
+        </div>
+    </article>
+    
+    <!-- Tarjeta 9 -->
+    <article class="card">
+        <div class="card-img-container">
+            <img src="https://picsum.photos/id/1069/1600/1066" alt="Festival de Jazz">
+            <span class="tag-badge">Recital</span>
+        </div>
+        <div class="card-body">
+            <span class="location">Lanús • Centro Cultural</span>
+            <h3>Festival de Jazz & Blues</h3>
+            <p class="price">Desde $ 42.000 ARS</p>
+            <div class="card-footer-actions">
+                <a href="#" class="btn-card">Comprar Entradas</a>
+                <button class="fav-icon-btn">
+    <img src="img/corazon.png" alt="Favorito" class="icon-img">
+</button>
+            </div>
+        </div>
+    </article>
+    
+    <!-- Tarjeta 9 -->
+    <article class="card">
+        <div class="card-img-container">
+            <img src="https://picsum.photos/id/1069/1600/1066" alt="Festival de Jazz">
+            <span class="tag-badge">Recital</span>
+        </div>
+        <div class="card-body">
+            <span class="location">Lanús • Centro Cultural</span>
+            <h3>Festival de Jazz & Blues</h3>
+            <p class="price">Desde $ 42.000 ARS</p>
+            <div class="card-footer-actions">
+                <a href="#" class="btn-card">Comprar Entradas</a> <button class="fav-icon-btn">
+    <img src="img/corazon.png" alt="Favorito" class="icon-img">
+</button>
+            </div>
+        </div>
+    </article>
+
+</div>
 
     </main>
 
