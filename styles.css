@@ -420,3 +420,75 @@ ul {
         width: 100%;
     }
 }
+/* --- CONTENEDOR PARA ALINEAR CARRITO Y CÁPSULA --- */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* --- BOTÓN DEL CARRITO --- */
+.cart-btn{
+    background-color: rgba(20, 24, 36, 0.85);
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(6px);
+}
+
+.cart-btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(214, 40, 40, 0.5);
+}
+/* Estilo general para los íconos locales */
+.icon-img {
+    width: 20px;   /* Ajustá el ancho según necesites (ej. 18px o 20px) */
+    height: 20px;  /* Mantiene la proporción */
+    object-fit: contain;
+    vertical-align: middle;
+}
+/* Texto principal (Viví una / única en Clicket) */
+.hero-title {
+    font-family: 'Inter', sans-serif; /* O podés usar 'Poppins', sans-serif */
+    font-weight: 400; /* Un peso liviano o normal para equilibrar */
+    color: #FFFFFF;
+    font-size: 6.8rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* La palabra destacada en el medio */
+.hero-highlight {
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 700;
+    font-size: 5.5rem;
+    font-style: italic;
+    display: inline-block;
+    
+    /* El toque dorado que ya elegimos */
+    color: #FFE082; 
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFE082 40%, #FFB300 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
+    text-shadow: 0 0 20px rgba(255, 193, 7, 0.4);
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('fonts/FONT-Dancing_Script,Inter,Poppins/Dancing_Script/DancingScript-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 900;
+    font-style: normal;
+}
