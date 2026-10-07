@@ -429,7 +429,7 @@ ul {
 
 /* --- BOTÓN DEL CARRITO --- */
 .cart-btn{
-    background-color: rgba(20, 24, 36, 0.85);
+    background-color: #0b0e14;
     border: 1.5px solid rgba(255, 255, 255, 0.3);
     color: #ffffff;
     width: 48px;
