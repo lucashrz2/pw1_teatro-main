@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicket | Todo el teatro para vos</title>
+    <!-- ================= RECURSOS Y FUENTES ================= -->
+    <link rel="stylesheet" href="fonts/Google_Sans_Flex/GoogleSansFlex-VariableFont_GRAD,ROND,opsz,slnt,wdth,wght.ttf">
+    <!-- ================= HOJA DE ESTILOS ================= -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ================= ENCABEZADO Y BANNER PRINCIPAL ================= -->
+    <div class="contenedor-hero">
+        
+        <!-- Barra de Navegación Flotante -->
+        <header class="encabezado-principal">
+            <div class="contenedor-encabezado">
+                
+                <!-- Logotipo -->
+                <div class="logotipo">
+                    <a href="index.html"><h2>Clicket</h2></a>
+                </div>
+
+                <!-- Menú de Navegación Central -->
+                <nav class="navegacion-principal">
+                    <ul>
+                        <li><a href="index.html" class="enlace-activo">Inicio</a></li>
+                        <li><a href="#">Funciones</a></li>
+                        <li><a href="#">Entradas</a></li>
+                        <li><a href="#">Destacados</a></li>
+                        <li><a href="cuenta-usuario.html">Mi Cuenta</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Panel de Acciones (Carrito y Autenticación) -->
+                <div class="acciones-encabezado">
+                    <a href="#" class="boton-carrito" title="Carrito de compras">
+                        <img src="img/carrito.png" alt="Carrito" class="imagen-icono">
+                    </a>
+                    
+                    <div class="contenedor-pildora-auth">
+                        <a href="login.html" class="boton-ingreso">Iniciar sesión</a>
+                        <a href="registroCuentas.html" class="boton-registro">Crear cuenta</a>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- Sección de Bienvenida (Banner) y Buscador -->
+        <section class="seccion-hero">
+            <div class="contenido-hero">
+                
+                <h1 class="titulo-hero">
+                    Viví una <br>
+                    <span class="resaltado-hero">experiencia</span> <br>
+                    única en Clicket
+                </h1>
+                
+                <!-- Barra Horizontal de Filtros -->
+                <div class="barra-filtros">
+                    
+                    <!-- Búsqueda por texto -->
+                    <div class="caja-filtro">
+                        <label for="buscar-obra">Buscar obra</label>
+                        <div class="entrada-con-icono">
+                            <input type="text" id="buscar-obra" placeholder="¿Qué querés ver?">
+                        </div>
+                    </div>
+
+                    <!-- Búsqueda por categoría -->
+                    <div class="caja-filtro">
+                        <label for="seleccionar-categoria">Categoría</label>
+                        <select id="seleccionar-categoria">
+                            <option value="">Todas</option>
+                            <option value="destacadas">Destacadas</option>
+                            <option value="comedia">Comedia</option>
+                            <option value="drama">Drama</option>
+                            <option value="infantil">Infantil</option>
+                        </select>
+                    </div>
+
+                    <!-- Búsqueda por ubicación -->
+                    <div class="caja-filtro">
+                        <label for="seleccionar-zona">Zona / Teatro</label>
+                        <select id="seleccionar-zona">
+                            <option value="">Todos</option>
+                            <option value="lanus">Lanús</option>
+                            <option value="caba">CABA</option>
+                            <option value="palermo">Palermo</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ================= CONTENIDO PRINCIPAL: CATÁLOGO ================= -->
+    <main class="contenedor diseno-principal">
+
+        <section class="seccion-catalogo">
+            <div class="encabezado-catalogo">
+                <h2>Obras y Eventos Destacados</h2>
+            </div>
+
+<!-- Grilla Adaptativa de Obras -->
+            <div class="grilla-obras">
+
+                <!-- Tarjeta 1 -->
+                <article class="tarjeta">
+                    <div class="contenedor-imagen-tarjeta">
+                        <img src="img/drama.jpg" alt="Gran Estreno Teatral">
+                        <span class="etiqueta-categoria">Drama</span>
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <span class="ubicacion">CABA • Teatro Corrientes</span>
+                        <h3>Gran Estreno Dramático</h3>
+                        <p class="precio">Desde $ 60.000 ARS</p>
+                        <div class="acciones-tarjeta">
+                            <a href="#" class="boton-tarjeta">Comprar Entradas</a>
+                            <button class="boton-favorito">
+                                <img src="img/corazon.png" alt="Favorito" class="imagen-icono">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2 -->
+                <article class="tarjeta">
+                    <div class="contenedor-imagen-tarjeta">
+                        <img src="img/musical.jpeg" alt="Concierto Acústico">
+                        <span class="etiqueta-categoria">Musical</span>
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <span class="ubicacion">CABA • Teatro Gran Rex</span>
+                        <h3>Concierto Musical en Vivo</h3>
+                        <p class="precio">Desde $ 45.000 ARS</p>
+                        <div class="acciones-tarjeta">
+                            <a href="#" class="boton-tarjeta">Comprar Entradas</a>
+                            <button class="boton-favorito">
+                                <img src="img/corazon.png" alt="Favorito" class="imagen-icono">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="tarjeta">
+                    <div class="contenedor-imagen-tarjeta">
+                        <img src="img/comedia.jpeg" alt="Comedia de Verano">
+                        <span class="etiqueta-categoria">Comedia</span>
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <span class="ubicacion">Mar del Plata • Teatro Roxy</span>
+                        <h3>Comedia de Verano</h3>
+                        <p class="precio">Desde $ 50.000 ARS</p>
+                        <div class="acciones-tarjeta">
+                            <a href="#" class="boton-tarjeta">Comprar Entradas</a>
+                            <button class="boton-favorito">
+                                <img src="img/corazon.png" alt="Favorito" class="imagen-icono">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 4 -->
+                <article class="tarjeta">
+                    <div class="contenedor-imagen-tarjeta">
+                        <img src="img/stand up.jpg" alt="Noche de Stand Up">
+                        <span class="etiqueta-categoria">Stand Up</span>
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <span class="ubicacion">Palermo • Club de la Comedia</span>
+                        <h3>Noche de Stand Up</h3>
+                        <p class="precio">Desde $ 35.000 ARS</p>
+                        <div class="acciones-tarjeta">
+                            <a href="#" class="boton-tarjeta">Comprar Entradas</a>
+                            <button class="boton-favorito">
+                                <img src="img/corazon.png" alt="Favorito" class="imagen-icono">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 5 -->
+                <article class="tarjeta">
+                    <div class="contenedor-imagen-tarjeta">
+                        <img src="img/drama.jpg" alt="Drama Clásico">
+                        <span class="etiqueta-categoria">Drama</span>
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <span class="ubicacion">CABA • Teatro San Martín</span>
+                        <h3>Drama Clásico en 3 Actos</h3>
+                        <p class="precio">Desde $ 40.000 ARS</p>
+                        <div class="acciones-tarjeta">
+                            <a href="#" class="boton-tarjeta">Comprar Entradas</a>
+                            <button class="boton-favorito">
+                                <img src="img/corazon.png" alt="Favorito" class="imagen-icono">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 6 -->
+                <article class="tarjeta">
+                    <div class="contenedor-imagen-tarjeta">
+                        <img src="img/infantil_2.jpg" alt="Aventura Mágica">
+                        <span class="etiqueta-categoria">Infantil</span>
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <span class="ubicacion">CABA • Teatro Colón</span>
+                        <h3>Aventura Mágica Infantil</h3>
+                        <p class="precio">Desde $ 85.000 ARS</p>
+                        <div class="acciones-tarjeta">
+                            <a href="#" class="boton-tarjeta">Comprar Entradas</a>
+                            <button class="boton-favorito">
+                                <img src="img/corazon.png" alt="Favorito" class="imagen-icono">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 7 -->
+                <article class="tarjeta">
+                    <div class="contenedor-imagen-tarjeta">
+                        <img src="img/monologo.jpg" alt="Monólogo">
+                        <span class="etiqueta-categoria">Monólogo</span>
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <span class="ubicacion">San Justo • Teatro Italia</span>
+                        <h3>Monólogo de una vida</h3>
+                        <p class="precio">Desde $ 30.000 ARS</p>
+                        <div class="acciones-tarjeta">
+                            <a href="#" class="boton-tarjeta">Comprar Entradas</a>
+                            <button class="boton-favorito">
+                                <img src="img/corazon.png" alt="Favorito" class="imagen-icono">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 8 -->
+                <article class="tarjeta">
+                    <div class="contenedor-imagen-tarjeta">
+                        <img src="img/infantil_3.jpg" alt="Show Infantil">
+                        <span class="etiqueta-categoria">Infantil</span>
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <span class="ubicacion">Almagro • Teatro Picadero</span>
+                        <h3>Show Infantil</h3>
+                        <p class="precio">Desde $ 38.000 ARS</p>
+                        <div class="acciones-tarjeta">
+                            <a href="#" class="boton-tarjeta">Comprar Entradas</a>
+                            <button class="boton-favorito">
+                                <img src="img/corazon.png" alt="Favorito" class="imagen-icono">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 9 -->
+                <article class="tarjeta">
+                    <div class="contenedor-imagen-tarjeta">
+                        <img src="img/musical_3.jpg" alt="Dance Script">
+                        <span class="etiqueta-categoria">Musical</span>
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <span class="ubicacion">Lanús • Centro Cultural</span>
+                        <h3>Dance Script</h3>
+                        <p class="precio">Desde $ 42.000 ARS</p>
+                        <div class="acciones-tarjeta">
+                            <a href="#" class="boton-tarjeta">Comprar Entradas</a>
+                            <button class="boton-favorito">
+                                <img src="img/corazon.png" alt="Favorito" class="imagen-icono">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta 10 -->
+                <article class="tarjeta">
+                    <div class="contenedor-imagen-tarjeta">
+                        <img src="img/recital_3.jpg" alt="Festival de Jazz">
+                        <span class="etiqueta-categoria">Recital</span>
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <span class="ubicacion">Lanús • Centro Cultural</span>
+                        <h3>Festival de Jazz & Blues</h3>
+                        <p class="precio">Desde $ 42.000 ARS</p>
+                        <div class="acciones-tarjeta">
+                            <a href="#" class="boton-tarjeta">Comprar Entradas</a>
+                            <button class="boton-favorito">
+                                <img src="img/corazon.png" alt="Favorito" class="imagen-icono">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta 11 -->
+                <article class="tarjeta">
+                    <div class="contenedor-imagen-tarjeta">
+                        <img src="img/musical_2.jpg" alt="Festival de Tap">
+                        <span class="etiqueta-categoria">Recital</span>
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <span class="ubicacion">Lanús • Centro Cultural</span>
+                        <h3>Festival de Tap Dance</h3>
+                        <p class="precio">Desde $ 42.000 ARS</p>
+                        <div class="acciones-tarjeta">
+                            <a href="#" class="boton-tarjeta">Comprar Entradas</a>
+                            <button class="boton-favorito">
+                                <img src="img/corazon.png" alt="Favorito" class="imagen-icono">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Tarjeta 12 -->
+                <article class="tarjeta">
+                    <div class="contenedor-imagen-tarjeta">
+                        <img src="img/monologo_3.jpg" alt="Monólogo Interior">
+                        <span class="etiqueta-categoria">Monólogo</span>
+                    </div>
+                    <div class="cuerpo-tarjeta">
+                        <span class="ubicacion">Lanús • Centro Cultural</span>
+                        <h3>Monólogo Interior</h3>
+                        <p class="precio">Desde $ 42.000 ARS</p>
+                        <div class="acciones-tarjeta">
+                            <a href="#" class="boton-tarjeta">Comprar Entradas</a>
+                            <button class="boton-favorito">
+                                <img src="img/corazon.png" alt="Favorito" class="imagen-icono">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= PIE DE PÁGINA ================= -->
+    <footer class="pie-pagina-principal">
+        <div class="contenedor grilla-pie-pagina">
+            <div>
+                <h4>Clicket</h4>
+                <p>Todo el teatro para vos en un solo lugar.</p>
+            </div>
+            <div>
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="#">Cómo comprar</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Legales</h4>
+                <ul>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Botón de Arrepentimiento</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="inferior-pie-pagina">
+            <p>&copy; 2007-2026 Clicket S.A. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

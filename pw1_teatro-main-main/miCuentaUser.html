@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicket - Mi Cuenta</title>
+    <!-- Hoja de Estilos para Paneles de Cuenta -->
+    <link rel="stylesheet" href="estilosInfoCuentas.css">
+</head>
+<body>
+
+    <!-- ================= CONTENEDOR PRINCIPAL ================= -->
+    <main class="contenedor-cuenta">
+        
+        <!-- Barra Lateral de Navegación -->
+        <aside class="barra-lateral-cuenta">
+            <h2>Mi Cuenta</h2>
+            <ul>
+                <li><a href="#mis-datos">Mis Datos</a></li>
+                <li><a href="#mis-favoritos">Mis Favoritos</a></li>
+                <li><a href="#">Mis Compras</a></li>
+                <li><a href="index.html">Cerrar Sesión</a></li>
+            </ul>
+        </aside>
+
+        <!-- Contenido Central del Panel -->
+        <div class="contenido-cuenta">
+            
+            <!-- Sección: Datos Personales -->
+            <section id="mis-datos">
+                <h2>Datos Personales</h2>
+                <form>
+                    <div class="grupo-formulario">
+                        <label for="campo-nombre">Nombre</label>
+                        <input type="text" id="campo-nombre" name="nombre" value="Juan" required>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="campo-apellido">Apellido</label>
+                        <input type="text" id="campo-apellido" name="apellido" value="Pérez" required>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="campo-email">Email</label>
+                        <input type="email" id="campo-email" name="email" value="juan.perez@ejemplo.com" required>
+                    </div>
+
+                    <div class="grupo-formulario">
+                        <label for="campo-telefono">Teléfono</label>
+                        <input type="tel" id="campo-telefono" name="telefono" value="+54 9 11 1234-5678" required>
+                    </div>
+
+                    <button type="submit" class="boton-guardar">Guardar Cambios</button>
+                </form>
+            </section>
+
+            <!-- Sección: Obras Favoritas -->
+            <section id="mis-favoritos">
+                <h2>Mis Favoritos</h2>
+
+                <div class="grilla-favoritos">
+                    <article class="tarjeta-evento">
+                        <img src="img/drama.jpg" alt="Gran Estreno Dramático">
+                        <h3>Gran Estreno Dramático</h3>
+                        <p>Descripción breve de la obra seleccionada.</p>
+                        <button class="boton-comprar">Comprar Entrada</button>
+                        <label class="opcion-quitar-favorito">
+                            <input type="checkbox" name="favorito" value="1" checked>
+                            Quitar de favoritos
+                        </label>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>

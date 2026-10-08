@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicket - Iniciar Sesión</title>
+    <!-- Hoja de Estilos para Autenticación -->
+    <link rel="stylesheet" href="estilosLogin.css">
+</head>
+<body>
+
+    <!-- ================= ENCABEZADO DE MARCA ================= -->
+    <header class="encabezado-autenticacion">
+        <div class="logotipo">Clicket</div>
+    </header>
+
+    <!-- ================= CONTENEDOR PRINCIPAL ================= -->
+    <main class="contenedor-autenticacion">
+        <form class="formulario-autenticacion" action="#" method="POST">
+            
+            <!-- Fila Superior: Título y Selector de Rol -->
+            <div class="fila-encabezado-formulario">
+                <h1>Iniciar Sesión</h1>
+                
+                <div class="selector-rol-superior">
+                    <label class="pestana-rol">
+                        <input type="radio" name="rol" value="usuario" checked>
+                        <span class="etiqueta-rol">Usuario</span>
+                    </label>
+                    <label class="pestana-rol">
+                        <input type="radio" name="rol" value="admin">
+                        <span class="etiqueta-rol">Admin</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Banner de Alerta -->
+            <div class="banner-alerta">
+                Debe verificar si existe un Administrador o crear el primero.
+            </div>
+
+            <!-- Campos del Formulario -->
+            <div class="grupo-formulario">
+                <label for="campo-usuario">Usuario o Email</label>
+                <input 
+                    type="text" 
+                    id="campo-usuario" 
+                    name="usuario" 
+                    placeholder="Ingrese su usuario o email" 
+                    required
+                >
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="campo-contrasena">Contraseña</label>
+                <input 
+                    type="password" 
+                    id="campo-contrasena" 
+                    name="contrasena" 
+                    placeholder="********" 
+                    required
+                >
+            </div>
+
+            <!-- Botón de Envío y Separador -->
+            <button type="submit" class="boton-envio">Ingresar</button>
+            
+            <div class="divisor-formulario">
+                <span>o</span>
+            </div>
+
+            <!-- Enlace a Registro -->
+            <div class="mensaje-registro">
+                <span>¿Primera vez en Clicket?</span>
+                <a href="registroCuentas.html" class="enlace-registro">Crear cuenta</a>
+            </div>
+
+            <!-- Enlace de Retorno -->
+            <a href="index.html" class="enlace-volver">&larr; Volver al inicio</a>
+
+        </form>
+    </main>
+
+</body>
+</html>
