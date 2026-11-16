@@ -1,0 +1,512 @@
+/* ==========================================================================
+   1. VARIABLES Y CONFIGURACIÓN GLOBAL
+   ========================================================================== */
+   @font-face {
+    font-family: 'Dancing Script';
+    src: url('fonts/FONT-Dancing_Script,Inter,Poppins/Dancing_Script/DancingScript-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 900;
+    font-style: normal;
+}
+:root {
+    --color-primario: rgba(214, 40, 40, 0.85);   /* Color carmesí teatral de la marca */
+    --color-fondo: #0b0e14;      /* Fondo negro/azul noche oscuro elegante */
+    --fondo-tarjeta: #141824;    /* Fondo de tarjetas y paneles */
+    --color-texto: #f8f9fa;      /* Texto principal claro */
+    --texto-secundario: #a0aec0; /* Texto secundario atenuado */
+    --color-borde: #232a3b;      /* Bordes sutiles en tono oscuro */
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Google Sans Flex', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.5;
+    font-family: 'Google Sans Flex', Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================================================
+   2. ENCABEZADO Y BARRA DE NAVEGACIÓN
+   ========================================================================== */
+.contenedor-hero {
+    position: relative;
+    width: 100%;
+}
+
+.encabezado-principal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 15px 0;
+}
+
+.contenedor-encabezado {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logotipo h2 {
+    color: var(--color-primario);
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+
+}
+
+.navegacion-principal ul {
+    display: flex;
+    gap: 22px;
+}
+
+.navegacion-principal a {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.navegacion-principal a:hover {
+    color: var(--color-primario);
+}
+
+/* ==========================================================================
+   3. BOTONES DE ACCIÓN (CARRITO Y LOGIN)
+   ========================================================================== */
+.acciones-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.boton-carrito {
+    background-color: #0b0e14;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(6px);
+}
+
+.boton-carrito:hover {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(214, 40, 40, 0.5);
+}
+
+.contenedor-pildora-auth {
+    background-color: rgba(214, 40, 40, 0.85);
+    padding: 5px 6px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.boton-ingreso {
+    background-color: #0b0e14;
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+.boton-ingreso:hover {
+    background-color: #161c28;
+}
+
+.boton-registro {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.boton-registro:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: #ffffff;
+}
+
+/* 
+   4. SECCIÓN HERO Y FILTROS
+ */
+.seccion-hero {
+    width: 100%;
+    min-height: 480px;
+    background-image: linear-gradient(to bottom, rgba(11, 14, 20, 0.2) 0%, #0b0e14 100%), url('img/imagenFondo2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 110px 20px 40px;
+    text-align: center;
+}
+
+.contenido-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 950px;
+}
+
+.titulo-hero {
+    position: relative;
+    z-index: 2;
+    color: #f5f5f4;
+    font-size: 52px;            /* Tamaño ajustado para balance visual */
+    font-weight: 780;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, .35);
+    animation: idxFadeUp .6s ease backwards;
+    line-height: 1.15;          
+}
+
+.resaltado-hero {
+    font-family: 'Dancing Script', cursive !important;
+    font-weight: 700;
+    font-size: 4.5rem;
+    font-style: italic;
+    display: inline-block;
+    color: #FFE082; 
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFE082 40%, #FFB300 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.8));
+    text-shadow: 0 0 20px rgba(255, 193, 7, 0.4);
+    margin: 6px 0;              /* Separación exacta superior e inferior */
+}
+
+.barra-filtros {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.caja-filtro {
+    background: rgba(11, 14, 20, 0.65);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 8px;
+    padding: 8px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 220px;
+    transition: all 0.2s ease;
+}
+
+.caja-filtro:focus-within, 
+.caja-filtro:hover {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 8px rgba(214, 40, 40, 0.4);
+}
+
+.caja-filtro label {
+    font-size: 0.75rem;
+    color: var(--texto-secundario);
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.caja-filtro input, 
+.caja-filtro select {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 0.95rem;
+    width: 100%;
+    outline: none;
+    cursor: pointer;
+}
+
+.caja-filtro select option {
+    background: var(--fondo-tarjeta);
+    color: var(--color-texto);
+}
+
+/* 
+   5. CATÁLOGO Y TARJETAS (GRILLA)
+    */
+.diseno-principal {
+    display: block;
+    padding: 40px 15px;
+}
+
+.encabezado-catalogo {
+    margin-bottom: 20px;
+}
+
+.grilla-obras {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background: var(--fondo-tarjeta);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-3px);
+}
+
+.contenedor-imagen-tarjeta {
+    position: relative;
+    height: 280px;
+}
+
+.contenedor-imagen-tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.etiqueta-categoria {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--color-primario);
+    color: white;
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.cuerpo-tarjeta {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ubicacion {
+    font-size: 0.75rem;
+    color: var(--texto-secundario);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.cuerpo-tarjeta h3 {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    flex: 1;
+}
+
+.precio {
+    font-weight: bold;
+    color: var(--color-primario);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.acciones-tarjeta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.boton-tarjeta {
+    background: #232a3b;
+    color: white;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    flex: 1;
+    transition: background 0.2s ease;
+}
+
+.boton-tarjeta:hover {
+    background: var(--color-primario);
+}
+
+.boton-favorito {
+    background: none;
+    border: 1px solid var(--color-borde);
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--texto-secundario);
+}
+
+.boton-favorito:hover {
+    border-color: var(--color-primario);
+}
+
+.imagen-icono {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+   6. PIE DE PÁGINA (FOOTER)
+   ========================================================================== */
+.pie-pagina-principal {
+    background: #07090e;
+    color: #a0aec0;
+    padding: 40px 0 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid var(--color-borde);
+}
+
+.grilla-pie-pagina {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.grilla-pie-pagina h4 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.grilla-pie-pagina ul li {
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+}
+
+.inferior-pie-pagina {
+    text-align: center;
+    border-top: 1px solid var(--color-borde);
+    padding-top: 15px;
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+/* Ajustes para Tablets y pantallas medianas */
+@media (max-width: 850px) {
+    .contenedor-encabezado {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .seccion-hero {
+        padding-top: 160px;
+    }
+
+    .barra-filtros {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .caja-filtro {
+        width: 100%;
+    }
+    
+    /* Achicamos un poco el título en tablets */
+    .titulo-hero {
+        font-size: 3.5rem;
+
+    }
+    .resaltado-hero {
+        font-size: 3rem;
+    }
+}
+
+/* Ajustes específicos para Celulares (como el iPhone de tu captura) */
+/* Ajustes específicos para Celulares */
+@media (max-width: 480px) {
+    .titulo-hero {
+        font-size: 2.4rem;
+    }
+    
+    .resaltado-hero {
+        font-size: 2.2rem;
+    }
+    
+    .navegacion-principal ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    /* AUMENTAMOS EL PADDING SUPERIOR para que el menú (que ahora es más alto) no tape el texto */
+    .seccion-hero {
+        padding-top: 230px; 
+        min-height: 450px;
+    }
+}@media (max-width: 480px) {
+    /* Achicamos bastante más el título para que no se corte "experiencia" */
+    .titulo-hero {
+        font-size: 2.4rem;
+    }
+    
+    .resaltado-hero {
+        font-size: 2.2rem;
+    }
+    
+    /* Hacemos que el menú de navegación se adapte si no entra en una sola línea */
+    .navegacion-principal ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    /* Reducimos el padding superior para que no quede tanto espacio vacío */
+    .seccion-hero {
+        padding-top: 140px;
+        min-height: 400px;
+    }
+}

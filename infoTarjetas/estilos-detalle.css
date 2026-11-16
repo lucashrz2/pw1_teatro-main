@@ -1,0 +1,314 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0F0606;
+    color: #FFFFFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #0F0606 0%, #2A0E12 50%, #1A0A21 100%);
+    background-attachment: fixed;
+    padding-bottom: 50px;
+}
+
+.header-detalle {
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(15, 6, 6, 0.85);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logotipo a {
+    color: #DC2626;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.detalle-container {
+    max-width: 1150px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.info-cabecera-evento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(26, 10, 33, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 22px 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.evento-titulo-fecha h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+
+.fecha-sub {
+    color: #D1D5DB;
+    font-size: 0.95rem;
+}
+
+.evento-ubicacion-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(15, 6, 6, 0.5);
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.icono-mapa {
+    font-size: 1.4rem;
+}
+
+.evento-ubicacion-box strong {
+    font-size: 0.95rem;
+    color: #FFFFFF;
+    display: block;
+}
+
+.evento-ubicacion-box p {
+    font-size: 0.8rem;
+    color: #9CA3AF;
+}
+
+.layout-evento {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.columna-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Bloque Unificado: Imagen + Acerca de la obra */
+.tarjeta-presentacion {
+    background: rgba(26, 10, 33, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.banner-evento {
+    width: 100%;
+    height: 380px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.banner-evento img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contenido-descripcion {
+    padding: 24px 28px;
+}
+
+.contenido-descripcion h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.contenido-descripcion p {
+    font-size: 0.95rem;
+    color: #D1D5DB;
+    line-height: 1.65;
+}
+
+/* Sección de Tickets */
+.seccion-tickets {
+    background: rgba(26, 10, 33, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.seccion-tickets h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.tabla-tickets {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.fila-ticket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 6, 6, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px 18px;
+    border-radius: 8px;
+}
+
+.info-ticket {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tipo-entrada {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.precio-ticket {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #DC2626;
+}
+
+.selector-cantidad select {
+    background: #1A0A21;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.fila-ticket.agotado {
+    opacity: 0.7;
+}
+
+.btn-agotado {
+    background: #4B5563;
+    color: #9CA3AF;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.btn-comprar-final {
+    background-color: #DC2626;
+    color: #FFFFFF;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-comprar-final:hover {
+    background-color: #B91C1C;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+}
+
+/* Columna Lateral */
+.columna-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.tarjeta-lateral {
+    background: rgba(26, 10, 33, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.flyer-mini img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.recomendaciones h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.miniatura-recomendada {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+    background: rgba(15, 6, 6, 0.5);
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.miniatura-recomendada:last-child {
+    margin-bottom: 0;
+}
+
+.miniatura-recomendada img {
+    width: 65px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.titulo-rec {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 3px;
+}
+
+.teatro-rec {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+}
+
+@media (max-width: 850px) {
+    .layout-evento {
+        grid-template-columns: 1fr;
+    }
+    .info-cabecera-evento {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .banner-evento {
+        height: 250px;
+    }
+}

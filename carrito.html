@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito | Clicket</title>
+    <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+
+    <header class="header-carrito">
+        <div class="logotipo"><a href="index.html">Clicket</a></div>
+        <nav class="nav-carrito">
+            <a href="index.html" class="enlace-nav">Cartelera</a>
+            <a href="cuenta-usuario.html" class="enlace-nav">Favoritos</a>
+            <a href="carrito.html" class="enlace-nav activo">
+                🛒 Carrito <span id="contador-carrito" class="badge-carrito">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="carrito-container">
+        <div class="cabecera-seccion">
+            <h1>Tu Carrito de Entradas</h1>
+            <p>Revisá las funciones seleccionadas antes de confirmar tu compra.</p>
+        </div>
+
+        <div class="layout-carrito">
+            <!-- Columna Izquierda: Lista de obras agregadas -->
+            <section class="lista-carrito" id="lista-carrito">
+                <!-- Se carga dinámicamente desde carrito.js -->
+            </section>
+
+            <!-- Columna Derecha: Resumen de compra -->
+            <aside class="resumen-carrito" id="resumen-carrito">
+                <h3>Resumen de Compra</h3>
+
+                <div class="linea-resumen">
+                    <span>Entradas seleccionadas</span>
+                    <strong id="total-entradas">0</strong>
+                </div>
+
+                <div class="linea-resumen">
+                    <span>Subtotal</span>
+                    <span id="subtotal-carrito">$ 0 ARS</span>
+                </div>
+
+                <div class="linea-resumen">
+                    <span>Cargo por servicio (10%)</span>
+                    <span id="cargo-servicio">$ 0 ARS</span>
+                </div>
+
+                <hr class="divisor-resumen">
+
+                <div class="linea-total">
+                    <span>Total a pagar</span>
+                    <strong id="total-carrito">$ 0 ARS</strong>
+                </div>
+
+                <button type="button" id="btn-finalizar-compra" class="btn-finalizar">
+                    Finalizar Compra
+                </button>
+                <button type="button" id="btn-vaciar-carrito" class="btn-vaciar">
+                    Vaciar Carrito
+                </button>
+            </aside>
+        </div>
+    </main>
+
+    <script src="carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+/* ==========================================================================
+   1. RESET GLOBAL Y CONFIGURACIÓN BASE
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f5f7;
+    color: #172b4d;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   2. ENCABEZADO
+   ========================================================================== */
+.encabezado-autenticacion {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.logotipo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* ==========================================================================
+   3. CONTENEDOR PRINCIPAL Y ESTRUCTURA DE FORMULARIO
+   ========================================================================== */
+.contenedor-autenticacion {
+    max-width: 900px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.formulario-autenticacion {
+    display: flex;
+    flex-direction: column;
+}
+
+.fila-encabezado-formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111111;
+}
+
+/* ==========================================================================
+   4. SELECTOR DE ROL (USUARIO / ADMIN)
+   ========================================================================== */
+.selector-rol-superior {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.pestana-rol {
+    cursor: pointer;
+    position: relative;
+}
+
+/* Oculta la casilla de radio nativa */
+.pestana-rol input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.etiqueta-rol {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e0006c;
+    opacity: 0.5;
+    transition: all 0.2s ease;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+.pestana-rol input[type="radio"]:checked + .etiqueta-rol {
+    opacity: 1;
+    border-bottom-color: #e0006c;
+}
+
+.pestana-rol:hover .etiqueta-rol {
+    opacity: 0.85;
+}
+
+/* ==========================================================================
+   5. BANNERS Y CAMPOS
+   ========================================================================== */
+.banner-alerta {
+    background-color: #fff8d6;
+    color: #7a6100;
+    padding: 0.85rem 1.2rem;
+    font-size: 0.95rem;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+}
+
+.grupo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.grupo-formulario label {
+    font-size: 0.95rem;
+    color: #333333;
+}
+
+.grupo-formulario input {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 3px;
+    background-color: #fbfbfb;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.grupo-formulario input:focus {
+    border-color: #0052cc;
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   6. BOTONES Y ENLACES DE ACCIÓN
+   ========================================================================== */
+.boton-envio {
+    background-color: #e0006c;
+    color: #ffffff;
+    border: none;
+    padding: 0.9rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.boton-envio:hover {
+    background-color: #b80058;
+}
+
+.divisor-formulario {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 1.5rem 0 1.2rem;
+    color: #888888;
+}
+
+.divisor-formulario::before,
+.divisor-formulario::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.divisor-formulario span {
+    padding: 0 1rem;
+    font-size: 0.9rem;
+}
+
+.mensaje-registro {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #555555;
+    margin-bottom: 1.5rem;
+}
+
+.enlace-registro {
+    color: #e0006c;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 0.3rem;
+    transition: color 0.2s ease;
+}
+
+.enlace-registro:hover {
+    color: #b80058;
+}
+
+.enlace-volver {
+    display: inline-block;
+    color: #333333;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-top: 1.2rem;
+    width: fit-content;
+}
+
+.enlace-volver:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN
+   ========================================================================== */
+@media screen and (max-width: 600px) {
+    .fila-encabezado-formulario {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}

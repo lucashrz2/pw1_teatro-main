@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gran Estreno Dramático | Clicket</title>
+    <link rel="stylesheet" href="estilos-detalle.css">
+</head>
+<body>
+       
+    <header class="header-detalle">
+        <div class="logotipo"><a href="../index.html">Clicket</a></div>
+    </header>
+
+    <main class="detalle-container">
+        <!-- Barra superior con Información del Evento -->
+        <div class="info-cabecera-evento">
+            <div class="evento-titulo-fecha">
+                <h1>Gran Estreno Dramático</h1>
+                <p class="fecha-sub">📅 Sábado 15 de Octubre de 2026 - 20:00 hs</p>
+            </div>
+            <div class="evento-ubicacion-box">
+                <span class="icono-mapa">📍</span>
+                <div>
+                    <strong>Teatro Principal</strong>
+                    <p>Av. Corrientes 1234, CABA, Buenos Aires</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido Principal en 2 Columnas Alineadas -->
+        <div class="layout-evento">
+            
+            <!-- Columna Izquierda: Bloque unificado + Entradas -->
+            <div class="columna-principal">
+                <article class="tarjeta-presentacion">
+                    <div class="banner-evento">
+                        <img src="../img/drama.jpg" alt="Gran Estreno Dramático">
+                    </div>
+
+                    <div class="contenido-descripcion">
+                        <h3>Acerca de la obra</h3>
+                        <p>¡No te pierdas el gran estreno dramático que está dando de qué hablar! Una obra magistral que combina emoción, intriga y actuaciones excepcionales en un mano a mano imperdible. Ven y sé parte de esta experiencia teatral única.</p>
+                    </div>
+                </article>
+
+                <!-- Sección de Tickets -->
+                <div class="seccion-tickets">
+                    <h3>Seleccioná tus entradas</h3>
+                    
+                    <div class="tabla-tickets">
+                        <div class="fila-ticket">
+                            <div class="info-ticket">
+                                <span class="tipo-entrada">Entrada General • Platea Baja</span>
+                                <span class="precio-ticket">$ 60.000 ARS</span>
+                            </div>
+                            <div class="selector-cantidad">
+                                <select aria-label="Cantidad de entradas">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="fila-ticket">
+                            <div class="info-ticket">
+                                <span class="tipo-entrada">Entrada General • Pullmann</span>
+                                <span class="precio-ticket">$ 45.000 ARS</span>
+                            </div>
+                            <div class="selector-cantidad">
+                                <select aria-label="Cantidad de entradas">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="fila-ticket agotado">
+                            <div class="info-ticket">
+                                <span class="tipo-entrada">Palco VIP (Agotado)</span>
+                                <span class="precio-ticket">$ 85.000 ARS</span>
+                            </div>
+                            <button class="btn-agotado" disabled>AGOTADO</button>
+                        </div>
+                    </div>
+
+                    <button class="btn-comprar-final" onclick="alert('¡Redirigiendo al proceso de pago!')">COMPRAR ENTRADAS</button>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Flyer miniatura y Recomendaciones -->
+            <div class="columna-lateral">
+                <div class="tarjeta-lateral flyer-mini">
+                    <img src="../img/drama.jpg" alt="Flyer miniatura">
+                </div>
+
+                <div class="tarjeta-lateral recomendaciones">
+                    <h4>Más obras de esta productora</h4>
+                    
+                    <div class="miniatura-recomendada">
+                        <img src="../img/musical.jpeg" alt="Musical">
+                        <div>
+                            <p class="titulo-rec">Concierto Musical en Vivo</p>
+                            <span class="teatro-rec">Teatro Gran Rex</span>
+                        </div>
+                    </div>
+
+                    <div class="miniatura-recomendada">
+                        <img src="../img/comedia.jpeg" alt="Comedia">
+                        <div>
+                            <p class="titulo-rec">Comedia de Verano</p>
+                            <span class="teatro-rec">Teatro Roxy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main> 
+</body>
+</html>

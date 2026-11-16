@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicket - Registrarse</title>
+    <!-- Hoja de Estilos para Autenticación -->
+    <link rel="stylesheet" href="estilosLogin.css">
+</head>
+<body>
+
+    <!-- ================= ENCABEZADO DE MARCA ================= -->
+    <header class="encabezado-autenticacion">
+        <div class="logotipo">Clicket</div>
+    </header>
+
+    <!-- ================= CONTENEDOR PRINCIPAL ================= -->
+    <main class="contenedor-autenticacion">
+        <form class="formulario-autenticacion" action="#" method="POST">
+            
+            <!-- Fila Superior: Título y Selector de Rol -->
+            <div class="fila-encabezado-formulario">
+                <h1>Registrar Cuenta</h1>
+                
+                <div class="selector-rol-superior">
+                    <label class="pestana-rol">
+                        <input type="radio" name="rol" value="usuario" checked>
+                        <span class="etiqueta-rol">Usuario</span>
+                    </label>
+                    <label class="pestana-rol">
+                        <input type="radio" name="rol" value="admin">
+                        <span class="etiqueta-rol">Admin</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Banner de Alerta -->
+            <div class="banner-alerta">
+                Debe verificar si existe un Administrador o crear el primero.
+            </div>
+
+            <!-- Campos del Formulario -->
+            <div class="grupo-formulario">
+                <label for="campo-usuario">Usuario o Email</label>
+                <input 
+                    type="text" 
+                    id="campo-usuario" 
+                    name="usuario" 
+                    placeholder="Ingrese su usuario o email" 
+                    required
+                >
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="campo-nombre">Nombre</label>
+                <input 
+                    type="text" 
+                    id="campo-nombre" 
+                    name="nombre" 
+                    placeholder="Ingrese su nombre" 
+                    required
+                >
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="campo-apellido">Apellido</label>
+                <input 
+                    type="text" 
+                    id="campo-apellido" 
+                    name="apellido" 
+                    placeholder="Ingrese su apellido" 
+                    required
+                >
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="campo-contrasena">Contraseña</label>
+                <input 
+                    type="password" 
+                    id="campo-contrasena" 
+                    name="contrasena" 
+                    placeholder="********" 
+                    required
+                >
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="boton-envio">Registrarse</button>
+            
+            <div class="divisor-formulario">
+                <span>o</span>
+            </div>
+
+            <!-- Enlace de Retorno -->
+            <a href="index.html" class="enlace-volver">&larr; Volver al inicio</a>
+
+        </form>
+    </main>
+
+</body>
+</html>

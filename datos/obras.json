@@ -1,0 +1,221 @@
+[
+  {
+    "id": "obra-1",
+    "titulo": "Gran Estreno Dramático",
+    "categoria": "Drama",
+    "ubicacion": "CABA • Teatro Corrientes",
+    "teatro": "Teatro Corrientes",
+    "direccion": "Av. Corrientes 1234, CABA, Buenos Aires",
+    "fecha": "Sábado 15 de Octubre de 2026 - 20:00 hs",
+    "precioTexto": "Desde $ 60.000 ARS",
+    "imagen": "img/drama.jpg",
+    "alt": "Gran Estreno Teatral",
+    "enlaceDetalle": "infoTarjetas/detalle.html?id=obra-1",
+    "descripcion": "¡No te pierdas el gran estreno dramático que está dando de qué hablar! Una obra magistral que combina emoción, intriga y actuaciones excepcionales en un mano a mano imperdible.",
+    "entradas": [
+      { "tipo": "Entrada General • Pullmann", "precio": "$ 60.000 ARS", "agotado": false },
+      { "tipo": "Platea Baja", "precio": "$ 75.000 ARS", "agotado": false },
+      { "tipo": "Palco VIP", "precio": "$ 95.000 ARS", "agotado": true }
+    ]
+  },
+  {
+    "id": "obra-2",
+    "titulo": "Concierto Musical en Vivo",
+    "categoria": "Musical",
+    "ubicacion": "CABA • Teatro Gran Rex",
+    "teatro": "Teatro Gran Rex",
+    "direccion": "Av. Corrientes 857, CABA, Buenos Aires",
+    "fecha": "Viernes 21 de Octubre de 2026 - 21:30 hs",
+    "precioTexto": "Desde $ 45.000 ARS",
+    "imagen": "img/musical.jpeg",
+    "alt": "Concierto Acústico",
+    "enlaceDetalle": "infoTarjetas/detalle.html?id=obra-2",
+    "descripcion": "Una noche inolvidable con orquesta en vivo y las mejores voces del teatro musical repasando los grandes clásicos contemporáneos.",
+    "entradas": [
+      { "tipo": "Super Pullman", "precio": "$ 45.000 ARS", "agotado": false },
+      { "tipo": "Platea Oro", "precio": "$ 65.000 ARS", "agotado": false },
+      { "tipo": "Platea Platino", "precio": "$ 80.000 ARS", "agotado": false }
+    ]
+  },
+  {
+    "id": "obra-3",
+    "titulo": "Comedia de Verano",
+    "categoria": "Comedia",
+    "ubicacion": "Mar del Plata • Teatro Roxy",
+    "teatro": "Teatro Roxy",
+    "direccion": "San Luis 1750, Mar del Plata, Buenos Aires",
+    "fecha": "Sábado 29 de Octubre de 2026 - 21:00 hs",
+    "precioTexto": "Desde $ 50.000 ARS",
+    "imagen": "img/comedia.jpeg",
+    "alt": "Comedia de Verano",
+    "enlaceDetalle": "infoTarjetas/detalle.html?id=obra-3",
+    "descripcion": "Enredos familiares, secretos inesperados y humor de principio a fin en la comedia más divertida de la temporada.",
+    "entradas": [
+      { "tipo": "Pullman General", "precio": "$ 50.000 ARS", "agotado": false },
+      { "tipo": "Platea Central", "precio": "$ 65.000 ARS", "agotado": false }
+    ]
+  },
+  {
+    "id": "obra-4",
+    "titulo": "Noche de Stand Up",
+    "categoria": "Stand Up",
+    "ubicacion": "Palermo • Club de la Comedia",
+    "teatro": "Club de la Comedia",
+    "direccion": "Jorge Luis Borges 1975, Palermo, CABA",
+    "fecha": "Jueves 3 de Noviembre de 2026 - 22:00 hs",
+    "precioTexto": "Desde $ 35.000 ARS",
+    "imagen": "img/stand up.jpg",
+    "alt": "Noche de Stand Up",
+    "enlaceDetalle": "infoTarjetas/detalle.html?id=obra-4",
+    "descripcion": "Cuatro comediantes en escena con rutinas nuevas, observación cotidiana e interacción directa con el público.",
+    "entradas": [
+      { "tipo": "Entrada General • Mesa Compartida", "precio": "$ 35.000 ARS", "agotado": false },
+      { "tipo": "Mesa Preferencial Frente al Escenario", "precio": "$ 45.000 ARS", "agotado": false }
+    ]
+  },
+  {
+    "id": "obra-5",
+    "titulo": "Drama Clásico en 3 Actos",
+    "categoria": "Drama",
+    "ubicacion": "CABA • Teatro San Martín",
+    "teatro": "Teatro San Martín",
+    "direccion": "Av. Corrientes 1530, CABA, Buenos Aires",
+    "fecha": "Domingo 6 de Noviembre de 2026 - 19:30 hs",
+    "precioTexto": "Desde $ 40.000 ARS",
+    "imagen": "img/drama.jpg",
+    "alt": "Drama Clásico",
+    "enlaceDetalle": "infoTarjetas/detalle.html?id=obra-5",
+    "descripcion": "Una puesta en escena sobria y contundente que revive los grandes dilemas morales del teatro universal en tres actos.",
+    "entradas": [
+      { "tipo": "Pullman", "precio": "$ 40.000 ARS", "agotado": false },
+      { "tipo": "Platea", "precio": "$ 55.000 ARS", "agotado": false }
+    ]
+  },
+  {
+    "id": "obra-6",
+    "titulo": "Aventura Mágica Infantil",
+    "categoria": "Infantil",
+    "ubicacion": "CABA • Teatro Colón",
+    "teatro": "Teatro Colón",
+    "direccion": "Cerrito 628, CABA, Buenos Aires",
+    "fecha": "Sábado 12 de Noviembre de 2026 - 16:00 hs",
+    "precioTexto": "Desde $ 85.000 ARS",
+    "imagen": "img/infantil_2.jpg",
+    "alt": "Aventura Mágica",
+    "enlaceDetalle": "infoTarjetas/detalle.html?id=obra-6",
+    "descripcion": "Un espectáculo visual con música sinfónica, acróbatas y escenografía fantástica pensado para disfrutar en familia.",
+    "entradas": [
+      { "tipo": "Galería / Cazuela", "precio": "$ 85.000 ARS", "agotado": false },
+      { "tipo": "Platea", "precio": "$ 120.000 ARS", "agotado": false },
+      { "tipo": "Palco Bajo", "precio": "$ 150.000 ARS", "agotado": true }
+    ]
+  },
+  {
+    "id": "obra-7",
+    "titulo": "Monólogo de una vida",
+    "categoria": "Monólogo",
+    "ubicacion": "San Justo • Teatro Italia",
+    "teatro": "Teatro Italia",
+    "direccion": "Almafuerte 3142, San Justo, Buenos Aires",
+    "fecha": "Viernes 18 de Noviembre de 2026 - 21:00 hs",
+    "precioTexto": "Desde $ 30.000 ARS",
+    "imagen": "img/monologo.jpg",
+    "alt": "Monólogo",
+    "enlaceDetalle": "infoTarjetas/detalle.html?id=obra-7",
+    "descripcion": "Un relato íntimo y conmovedor sobre los recuerdos, las decisiones que marcan el destino y el paso del tiempo.",
+    "entradas": [
+      { "tipo": "Entrada General", "precio": "$ 30.000 ARS", "agotado": false },
+      { "tipo": "Platea Preferencial", "precio": "$ 38.000 ARS", "agotado": false }
+    ]
+  },
+  {
+    "id": "obra-8",
+    "titulo": "Show Infantil",
+    "categoria": "Infantil",
+    "ubicacion": "Almagro • Teatro Picadero",
+    "teatro": "Teatro Picadero",
+    "direccion": "Pasaje Enrique Santos Discépolo 1857, CABA",
+    "fecha": "Domingo 20 de Noviembre de 2026 - 15:30 hs",
+    "precioTexto": "Desde $ 38.000 ARS",
+    "imagen": "img/infantil_3.jpg",
+    "alt": "Show Infantil",
+    "enlaceDetalle": "infoTarjetas/detalle.html?id=obra-8",
+    "descripcion": "Canciones originales, títeres gigantes y juegos participativos para que los más chicos vivan su primera gran experiencia teatral.",
+    "entradas": [
+      { "tipo": "Entrada General", "precio": "$ 38.000 ARS", "agotado": false },
+      { "tipo": "Pack Familiar (4 entradas)", "precio": "$ 135.000 ARS", "agotado": false }
+    ]
+  },
+  {
+    "id": "obra-9",
+    "titulo": "Dance Script",
+    "categoria": "Musical",
+    "ubicacion": "Lanús • Centro Cultural",
+    "teatro": "Centro Cultural Lanús",
+    "direccion": "Av. Hipólito Yrigoyen 3863, Lanús, Buenos Aires",
+    "fecha": "Sábado 26 de Noviembre de 2026 - 20:30 hs",
+    "precioTexto": "Desde $ 42.000 ARS",
+    "imagen": "img/musical_3.jpg",
+    "alt": "Dance Script",
+    "enlaceDetalle": "infoTarjetas/detalle.html?id=obra-9",
+    "descripcion": "Danza contemporánea, coreografías urbanas y música electrónica fusionadas en una narrativa escénica llena de energía.",
+    "entradas": [
+      { "tipo": "Entrada General", "precio": "$ 42.000 ARS", "agotado": false },
+      { "tipo": "Sector VIP", "precio": "$ 55.000 ARS", "agotado": false }
+    ]
+  },
+  {
+    "id": "obra-10",
+    "titulo": "Festival de Jazz & Blues",
+    "categoria": "Recital",
+    "ubicacion": "Lanús • Centro Cultural",
+    "teatro": "Centro Cultural Lanús",
+    "direccion": "Av. Hipólito Yrigoyen 3863, Lanús, Buenos Aires",
+    "fecha": "Viernes 4 de Diciembre de 2026 - 21:00 hs",
+    "precioTexto": "Desde $ 42.000 ARS",
+    "imagen": "img/recital_3.jpg",
+    "alt": "Festival de Jazz",
+    "enlaceDetalle": "infoTarjetas/detalle.html?id=obra-10",
+    "descripcion": "Una velada con las mejores bandas locales de jazz y blues, improvisación en vivo y sonido de sala acústica.",
+    "entradas": [
+      { "tipo": "Entrada General", "precio": "$ 42.000 ARS", "agotado": false },
+      { "tipo": "Platea Central", "precio": "$ 52.000 ARS", "agotado": false }
+    ]
+  },
+  {
+    "id": "obra-11",
+    "titulo": "Festival de Tap Dance",
+    "categoria": "Recital",
+    "ubicacion": "Lanús • Centro Cultural",
+    "teatro": "Centro Cultural Lanús",
+    "direccion": "Av. Hipólito Yrigoyen 3863, Lanús, Buenos Aires",
+    "fecha": "Sábado 5 de Diciembre de 2026 - 20:00 hs",
+    "precioTexto": "Desde $ 42.000 ARS",
+    "imagen": "img/musical_2.jpg",
+    "alt": "Festival de Tap",
+    "enlaceDetalle": "infoTarjetas/detalle.html?id=obra-11",
+    "descripcion": "Ritmo, percusión corporal y claqué de alto nivel con más de quince bailarines en escena acompañados por trío de jazz.",
+    "entradas": [
+      { "tipo": "Entrada General", "precio": "$ 42.000 ARS", "agotado": false },
+      { "tipo": "Platea Preferencial", "precio": "$ 54.000 ARS", "agotado": false }
+    ]
+  },
+  {
+    "id": "obra-12",
+    "titulo": "Monólogo Interior",
+    "categoria": "Monólogo",
+    "ubicacion": "Lanús • Centro Cultural",
+    "teatro": "Centro Cultural Lanús",
+    "direccion": "Av. Hipólito Yrigoyen 3863, Lanús, Buenos Aires",
+    "fecha": "Domingo 13 de Diciembre de 2026 - 19:00 hs",
+    "precioTexto": "Desde $ 42.000 ARS",
+    "imagen": "img/monologo_3.jpg",
+    "alt": "Monólogo Interior",
+    "enlaceDetalle": "infoTarjetas/detalle.html?id=obra-12",
+    "descripcion": "Una pieza teatral minimalista que explora los pensamientos más profundos de un personaje frente a un punto de quiebre.",
+    "entradas": [
+      { "tipo": "Entrada General", "precio": "$ 42.000 ARS", "agotado": false },
+      { "tipo": "Platea", "precio": "$ 50.000 ARS", "agotado": false }
+    ]
+  }
+]
