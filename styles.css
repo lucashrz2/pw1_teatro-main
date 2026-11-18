@@ -455,34 +455,21 @@ ul {
 }
 
 /* ==========================================
-   MODO CLARO (Telón de fondo + Degradado a Lila)
+   MODO CLARO (Opción A)
    ========================================== */
- 
-/* 1. Fondo base lila para todo el sitio */
 body.modo-claro {
     min-height: 100vh;
     margin: 0;
-    background-color: #E5DDF5 !important;
-    background-image: none !important; /* Quita el degradado plano del body */
-    color: #1F1926;
+    background-color: #f4f5f7 !important;
+    background-image: none !important;
+    color: #172b4d !important;
 }
- 
-/* 2. Banner principal: telón con difuminado que arranca desde los filtros y conecta con el cuerpo */
+
+/* 2. Banner superior: Mantiene exactamente el fondo original del modo oscuro */
 body.modo-claro .seccion-hero {
-    /* Reemplazamos el degradado original para que termine en el lila del body */
-    background-image:
-        linear-gradient(
-            to bottom,
-            rgba(11, 14, 20, 0.2)   0%,     /* Arriba: muestra el telón casi limpio */
-            rgba(11, 14, 20, 0.2)   55%,    /* Zona título: sigue mostrando el telón */
-            rgba(50, 20, 60, 0.55)  72%,    /* Inicio del difuminado justo en los filtros */
-            rgba(100, 60, 120, 0.80) 84%,   /* Violeta intermedio */
-            #E5DDF5                  100%    /* Conecta directo con el fondo lila del body */
-        ),
-        url('img/imagenFondo2.png') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+    background-image: linear-gradient(to bottom, rgba(11, 14, 20, 0.2) 0%, #0b0e14 100%), url('img/imagenFondo2.png') !important;
+    background-size: cover;
+    background-position: center;
 }
  
 /* El contenedor-hero no necesita degradado propio en modo claro */
@@ -540,8 +527,8 @@ body.modo-claro .cuerpo-tarjeta .precio {
 }
  
 body.modo-claro .acciones-tarjeta .boton-tarjeta {
-    background-color: #1A0A21 !important;
-    color: #FFFFFF !important;
+    background-color: #d33b3b !important;
+    color: #ffffff !important;
 }
  
 body.modo-claro .acciones-tarjeta .boton-favorito {
@@ -606,7 +593,7 @@ body.modo-claro .acciones-tarjeta .boton-favorito {
 
 /* Botón activo (seleccionado) */
 .btn-vista.activo {
-    background: #DC2626; /* Color rojo destacado Clicket */
+    background: #d62828d9;
     color: #FFFFFF !important;
     box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
 }
@@ -625,16 +612,15 @@ body.modo-claro .btn-vista {
 }
 
 body.modo-claro .btn-vista:hover {
-    color: #1F1926 !important;
+    color: #d62828d9 !important;
 }
 
 body.modo-claro .btn-vista.activo {
-    background: #1A0A21 !important; /* Tono oscuro contrastante en modo claro */
     color: #FFFFFF !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px #d62828d9(0, 0, 0, 0.15);
 }
 
-/* 1. La grilla pasa a tener 1 sola columna de ancho completo */
+/* Vista Lista */
 .grilla-obras.vista-lista {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
@@ -651,8 +637,8 @@ body.modo-claro .btn-vista.activo {
 
 /* 3. La imagen queda fija a la izquierda */
 .grilla-obras.vista-lista .contenedor-imagen-tarjeta {
-    width: 220px !important;
-    height: 100% !important;
+    width: 220px;
+    height: 100%;
     flex-shrink: 0;
 }
 
@@ -739,7 +725,124 @@ body.modo-claro .notificacion-toast {
     background: #DC2626;
     color: #FFFFFF;
 }
+/* =========================================================
+   MODO CLARO: FAVORITOS, HEADER Y CARRUSEL PRÓXIMAS FUNCIONES
+   ========================================================= */
 
+/* 1. Ícono de Favoritos (invierte el corazón blanco a oscuro y le da marco) */
+body.modo-claro .boton-favorito,
+body.light-mode .boton-favorito,
+body.tema-claro .boton-favorito {
+    background-color: #F4F1FA;
+    border: 1px solid #D8D2E7;
+}
+
+body.modo-claro .boton-favorito:hover,
+body.light-mode .boton-favorito:hover,
+body.tema-claro .boton-favorito:hover {
+    background-color: #FEE2E2;
+    border-color: #DC2626;
+}
+
+body.modo-claro .boton-favorito .imagen-icono,
+body.light-mode .boton-favorito .imagen-icono,
+body.tema-claro .boton-favorito .imagen-icono {
+    filter: brightness(0); /* Convierte el ícono blanco en negro nítido */
+}
+
+/* 2. Sección y cabecera del Carrusel */
+body.modo-claro .seccion-proximas,
+body.light-mode .seccion-proximas,
+body.tema-claro .seccion-proximas {
+    border-top-color: rgba(26, 10, 33, 0.12);
+}
+
+body.modo-claro .etiqueta-recomendados,
+body.light-mode .etiqueta-recomendados,
+body.tema-claro .etiqueta-recomendados {
+    background: rgba(220, 38, 38, 0.1);
+    color: #DC2626;
+    border-color: rgba(220, 38, 38, 0.3);
+}
+
+body.modo-claro .cabecera-proximas h2,
+body.light-mode .cabecera-proximas h2,
+body.tema-claro .cabecera-proximas h2 {
+    color: #1A0A21;
+}
+
+/* 3. Flechas Anterior / Siguiente del Carrusel */
+body.modo-claro .btn-flecha-carrusel,
+body.light-mode .btn-flecha-carrusel,
+body.tema-claro .btn-flecha-carrusel {
+    background: #FFFFFF;
+    color: #1A0A21;
+    border: 1px solid #D8D2E7;
+    box-shadow: 0 2px 8px rgba(26, 10, 33, 0.08);
+}
+
+body.modo-claro .btn-flecha-carrusel:hover,
+body.light-mode .btn-flecha-carrusel:hover,
+body.tema-claro .btn-flecha-carrusel:hover {
+    background: #DC2626;
+    color: #FFFFFF;
+    border-color: #DC2626;
+}
+
+/* 4. Tarjetas del Carrusel */
+body.modo-claro .tarjeta-proxima,
+body.light-mode .tarjeta-proxima,
+body.tema-claro .tarjeta-proxima {
+    background: #FFFFFF;
+    border: 1px solid #D8D2E7;
+    box-shadow: 0 4px 15px rgba(26, 10, 33, 0.06);
+}
+
+body.modo-claro .tarjeta-proxima:hover,
+body.light-mode .tarjeta-proxima:hover,
+body.tema-claro .tarjeta-proxima:hover {
+    border-color: #DC2626;
+    box-shadow: 0 10px 24px rgba(26, 10, 33, 0.12);
+}
+
+body.modo-claro .info-proxima h3,
+body.light-mode .info-proxima h3,
+body.tema-claro .info-proxima h3 {
+    color: #1A0A21;
+}
+
+body.modo-claro .fecha-proxima,
+body.light-mode .fecha-proxima,
+body.tema-claro .fecha-proxima {
+    color: #5B526B;
+}
+
+/* 5. Indicadores inferiores (puntos y píldora activa) */
+body.modo-claro .indicador-dot,
+body.light-mode .indicador-dot,
+body.tema-claro .indicador-dot {
+    background: rgba(26, 10, 33, 0.22);
+}
+
+body.modo-claro .indicador-dot.activo,
+body.light-mode .indicador-dot.activo,
+body.tema-claro .indicador-dot.activo {
+    background: #DC2626;
+}
+
+/* 6. Mensaje sin resultados de búsqueda en modo claro */
+body.modo-claro .sin-resultados,
+body.light-mode .sin-resultados,
+body.tema-claro .sin-resultados {
+    background: #FFFFFF;
+    border-color: #D8D2E7;
+}
+
+body.modo-claro .sin-resultados p,
+body.light-mode .sin-resultados p,
+body.tema-claro .sin-resultados p {
+    color: #1A0A21;
+}
 
 /* Desplazamiento suave al tocar enlaces internos (#proximas-funciones) */
 html {

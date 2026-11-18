@@ -12,6 +12,8 @@
     <script src="tarjeta-lista.js" defer></script>
     <script src="carrito.js" defer></script>
     <script src="favoritos.js" defer></script>
+    <script src="carrusel.js" defer></script>
+    <!-- Nueva hoja exclusiva para los modos claro y oscuro -->
 </head>
 <body>
 
@@ -52,7 +54,6 @@
                         <a href="registroCuentas.html" class="boton-registro">Crear cuenta</a>
                     </div>
                 </div>
-               
             </div>
         </header>
 
@@ -152,6 +153,27 @@
     <div class="indicadores-carrusel" id="indicadores-carrusel"></div>
 </section>
 
+<!-- Sección Carrusel: Próximas Funciones -->
+<section id="proximas-funciones" class="seccion-proximas">
+    <div class="cabecera-proximas">
+        <div>
+            <span class="etiqueta-recomendados">● RECOMENDADOS</span>
+            <h2>Próximas funciones</h2>
+        </div>
+
+        <div class="controles-carrusel">
+            <button type="button" id="btn-prev-funciones" class="btn-flecha-carrusel" aria-label="Anterior">&#10094;</button>
+            <button type="button" id="btn-next-funciones" class="btn-flecha-carrusel" aria-label="Siguiente">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="carrusel-track" id="carrusel-funciones">
+        <!-- Se genera automáticamente desde datos/obras.json -->
+    </div>
+
+    <!-- Indicadores inferiores tipo píldora -->
+    <div class="indicadores-carrusel" id="indicadores-carrusel"></div>
+</section>
     </main>
 
     <!-- ================= PIE DE PÁGINA ================= -->
