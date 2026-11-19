@@ -79,7 +79,21 @@ ul {
     letter-spacing: -0.5px;
 
 }
+/* En modo claro, si el header NO está dentro del hero oscuro (como en cuenta-usuario.html) */
+body.modo-claro .navegacion-principal a {
+    color: #0b0e14;
+}
 
+/* Mantiene blanco el nav en index.html sobre el banner oscuro */
+body.modo-claro .contenedor-hero .navegacion-principal a {
+    color: #ffffff;
+}
+
+/* Hover rojo en ambos modos */
+.navegacion-principal a:hover,
+body.modo-claro .navegacion-principal a:hover {
+    color: var(--color-primario);
+}
 .navegacion-principal ul {
     display: flex;
     gap: 22px;
@@ -106,7 +120,7 @@ ul {
 }
 
 .boton-carrito {
-    background-color: #0b0e14;
+    background-color: #0b0e14eb;
     border: 1.5px solid rgba(255, 255, 255, 0.3);
     color: #ffffff;
     width: 48px;
@@ -126,7 +140,13 @@ ul {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(214, 40, 40, 0.5);
 }
-
+.boton-tema:hover,
+body.modo-claro .boton-tema:hover {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(214, 40, 40, 0.5);
+}
 .contenedor-pildora-auth {
     background-color: var(--color-primario);
     padding: 3px 4px;
@@ -393,6 +413,17 @@ ul {
     object-fit: contain;
     vertical-align: middle;
 }
+/* ==========================================================================
+ICONOS DEL MENÚ LATERAL EN MODO CLARO (INVERTIR PNG BLANCOS A OSCUROS)
+   ========================================================================== */
+body.modo-claro .barra-lateral-cuenta img {
+    filter: invert(0.85);
+    transition: filter 0.2s ease;
+}
+
+body.modo-claro .barra-lateral-cuenta a:hover img {
+    filter: invert(0.25) sepia(1) saturate(5) hue-rotate(335deg);
+}
 
 /* ==========================================================================
    6. PIE DE PÁGINA (FOOTER)
@@ -417,7 +448,9 @@ ul {
     margin-bottom: 10px;
     font-size: 0.95rem;
 }
-
+body.modo-claro .stat-label {
+    color: #000000;
+}
 .grilla-pie-pagina ul li {
     margin-bottom: 6px;
     font-size: 0.85rem;
@@ -434,7 +467,7 @@ ul {
    ESTILO DEL BOTÓN DE TEMA EN CABECERA
    ========================================== */
 .boton-tema {
-    background: #0b0e14;
+    background: #0b0e14eb;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     width: 48px;

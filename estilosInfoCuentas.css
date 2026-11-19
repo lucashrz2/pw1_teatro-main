@@ -221,14 +221,14 @@ body {
 
 .boton-quitar:hover {
     background: #dc2626;
-    color: #ffffff;
+    color: #6e6464;
 }
 
 .mensaje-vacio {
     grid-column: 1 / -1;
     padding: 40px 20px;
     text-align: center;
-    color: #9ca3af;
+    color: #48494ad2;
 }
 
 .boton-explorar {
@@ -260,7 +260,7 @@ body {
 }
 
 .boton-crear {
-    background-color: #e0006c;
+    background-color: #d62828d9;
     color: #ffffff;
     padding: 0.6rem 1rem;
     border-radius: 6px;
@@ -349,7 +349,7 @@ body.modo-claro .barra-lateral-cuenta,
 body.modo-claro #mis-datos,
 body.modo-claro #mis-favoritos,
 body.modo-claro #obras-publicadas {
-    background-color: #9f9b9bf0;
+    background-color: #bdbabaf0;
     border-color: #e2e8f0;
 }
 
@@ -373,7 +373,7 @@ body.modo-claro .barra-lateral-cuenta a {
 
 body.modo-claro .barra-lateral-cuenta a:hover {
     background-color: #f7fafc;
-    color: #e0006c;
+    color: #000000;
 }
 
 body.modo-claro .grupo-formulario label {
@@ -449,7 +449,7 @@ body.modo-claro .boton-eliminar {
 }
 
 body.modo-claro .encabezado-cuenta {
-    background-color: #ffffff;
+    background-color: #c9c9c9;
     border-bottom: 1px solid #e2e8f0;
 }
 
@@ -480,7 +480,7 @@ body.modo-claro .banner-perfil {
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.06em;
-    color: #ff2e63;
+    color: #d62828d9;
     margin-bottom: 0.2rem;
 }
 
@@ -527,7 +527,7 @@ body.modo-claro .mini-stat {
 
 .stat-label {
     font-size: 0.75rem;
-    color: #000000;
+    color: #ffffff;
 }
 
 /* Formulario en 2 columnas para aprovechar el ancho */
