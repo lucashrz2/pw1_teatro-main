@@ -4,53 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clicket - Panel de Administración</title>
-    <!-- Hoja de Estilos para Paneles de Cuenta -->
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="estilosInfoCuentas.css">
+    <script src="modoOscuro.js" defer></script>
+    <script src="carrito.js" defer></script>
+    <script src="auth.js" defer></script>
+    <script src="eventosAdmin.js" defer></script>
 </head>
 <body>
+
+    <!-- ================= NAVBAR IDÉNTICA AL HOME ================= -->
+    <header class="encabezado-principal encabezado-cuenta">
+        <div class="contenedor-encabezado">
+            <div class="logotipo">
+                <a href="index.html"><h2>Clicket</h2></a>
+            </div>
+
+            <nav class="navegacion-principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#proximas-funciones">Funciones</a></li>
+                    <li><a href="carrito.html">Entradas</a></li>
+                    <li><a href="cuenta-usuario.html" class="enlace-activo">Panel Admin</a></li>
+                </ul>
+            </nav>
+
+            <div class="acciones-encabezado">
+                <button id="btnTema" class="boton-tema" aria-label="Cambiar tema">🌙</button>
+                <a href="carrito.html" class="boton-carrito" title="Carrito de compras">
+                    <img src="img/carrito.png" alt="Carrito" class="imagen-icono">
+                    <span id="contador-carrito" class="badge-carrito">0</span>
+                </a>
+                <div class="contenedor-pildora-auth">
+                    <a href="index.html" class="boton-registro" id="btn-salir-top">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= BANNER SUPERIOR DE ADMIN ================= -->
+    <section class="banner-perfil">
+        <div class="contenedor-banner-perfil">
+            <div>
+                <span class="badge-rol-perfil">● ADMINISTRADOR DE CARTELERA</span>
+                <h1>Panel de <span id="saludo-nombre">Admin</span></h1>
+                <p>Administrá tus datos y publicá, editá o eliminá tus obras en cartelera.</p>
+            </div>
+            <div class="resumen-cards">
+                <div class="mini-stat">
+                    <span class="stat-numero" id="stat-obras-admin">0</span>
+                    <span class="stat-label">Mis obras</span>
+                </div>
+                <div class="mini-stat">
+                    <span class="stat-numero">Activo</span>
+                    <span class="stat-label">Estado</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- ================= CONTENEDOR PRINCIPAL ================= -->
     <main class="contenedor-cuenta">
         
         <!-- Barra Lateral de Navegación -->
-        <aside class="barra-lateral-cuenta">
-            <h2>Panel Admin</h2>
-            <ul>
-                <li><a href="#mis-datos">Mis Datos</a></li>
-                <li><a href="#obras-publicadas">Obras Publicadas</a></li>
-                <li><a href="#">Publicar Nuevo Evento</a></li>
-                <li><a href="index.html">Cerrar Sesión</a></li>
-            </ul>
-        </aside>
+<aside class="barra-lateral-cuenta">
+    <h2>Panel Admin</h2>
+    <ul>
+        <li>
+            <a href="#mis-datos">
+                <img src="img/user.png" alt="" class="imagen-icono"> Mis Datos
+            </a>
+        </li>
+        <li>
+            <a href="#obras-publicadas">
+                <img src="img/mascara.png" alt="" class="imagen-icono"> Obras Publicadas
+            </a>
+        </li>
+        <li>
+            <a href="index.html" > Volver al Inicio
+            </a>
+        </li>
+        <li><a href="index.html">Cerrar Sesión</a></li>
+    </ul>
+</aside>
 
         <!-- Contenido Central del Panel -->
         <div class="contenido-cuenta">
             
-            <!-- Sección: Datos Personales -->
+            <!-- Sección: Datos Personales (en 2 columnas) -->
             <section id="mis-datos">
                 <h2>Datos Personales</h2>
-                <form>
+                <form class="form-dos-columnas">
                     <div class="grupo-formulario">
                         <label for="campo-nombre">Nombre</label>
-                        <input type="text" id="campo-nombre" name="nombre" value="Juan" required>
+                        <input type="text" id="campo-nombre" name="nombre" placeholder="Tu nombre" required>
                     </div>
 
                     <div class="grupo-formulario">
                         <label for="campo-apellido">Apellido</label>
-                        <input type="text" id="campo-apellido" name="apellido" value="Pérez" required>
+                        <input type="text" id="campo-apellido" name="apellido" placeholder="Tu apellido" required>
                     </div>
 
                     <div class="grupo-formulario">
                         <label for="campo-email">Email</label>
-                        <input type="email" id="campo-email" name="email" value="juan.perez@ejemplo.com" required>
-                    </div>
+                        <input type="email" id="campo-email" name="email" placeholder="tu@email.com" required>
+                                            </div>
 
                     <div class="grupo-formulario">
                         <label for="campo-telefono">Teléfono</label>
-                        <input type="tel" id="campo-telefono" name="telefono" value="+54 9 11 1234-5678" required>
+                        <input type="tel" id="campo-telefono" name="telefono" placeholder="+54 9 11 ..." required>
                     </div>
 
-                    <button type="submit" class="boton-guardar">Guardar Cambios</button>
+                    <div class="fila-boton-guardar">
+                        <button type="submit" class="boton-guardar">Guardar Cambios</button>
+                    </div>
                 </form>
             </section>
 
@@ -62,35 +129,7 @@
                 </div>
 
                 <div class="grilla-favoritos">
-                    
-                    <!-- Tarjeta Admin 1 -->
-                    <article class="tarjeta-evento tarjeta-admin">
-                        <span class="etiqueta-estado activo">Activo</span>
-                        <img src="img/drama.jpg" alt="Gran Estreno Teatral 2026">
-                        <h3>Gran Estreno Teatral 2026</h3>
-                        <p class="informacion-evento">CABA • Teatro Corrientes</p>
-                        <p class="ventas-evento"><strong>150 / 200</strong> entradas vendidas</p>
-                        
-                        <div class="acciones-admin">
-                            <button class="boton-editar">Editar</button>
-                            <button class="boton-eliminar">Eliminar</button>
-                        </div>
-                    </article>
-
-                    <!-- Tarjeta Admin 2 -->
-                    <article class="tarjeta-evento tarjeta-admin">
-                        <span class="etiqueta-estado agotado">Agotado</span>
-                        <img src="img/musical.jpeg" alt="Concierto Acústico">
-                        <h3>Concierto Acústico en Vivo</h3>
-                        <p class="informacion-evento">CABA • Teatro Gran Rex</p>
-                        <p class="ventas-evento"><strong>300 / 300</strong> entradas vendidas</p>
-                        
-                        <div class="acciones-admin">
-                            <button class="boton-editar">Editar</button>
-                            <button class="boton-eliminar">Eliminar</button>
-                        </div>
-                    </article>
-
+                    <!-- Acá se cargan dinámicamente los eventos creados por este admin -->
                 </div>
             </section>
 

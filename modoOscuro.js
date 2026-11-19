@@ -16,15 +16,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 2. Alternar estado al hacer clic
     if (btnTema) {
-        btnTema.addEventListener("click", () => {
-            document.body.classList.toggle("modo-claro");
+    btnTema.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.body.classList.toggle("modo-claro");
 
-            // Definir esClaro correctamente después del toggle
-            const esClaro = document.body.classList.contains("modo-claro");
+        // Definir esClaro correctamente después del toggle
+        const esClaro = document.body.classList.contains("modo-claro");
 
-            // Actualizar imagen y guardar persistencia
-            btnTema.innerHTML = esClaro ? imgSol : imgLuna;
-            localStorage.setItem("tema", esClaro ? "claro" : "oscuro");
+        // Actualizar imagen y guardar persistencia
+        btnTema.innerHTML = esClaro ? imgSol : imgLuna;
+        localStorage.setItem("tema", esClaro ? "claro" : "oscuro");
         });
     }
 });

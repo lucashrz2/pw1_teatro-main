@@ -177,14 +177,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // 4. CARGA DESDE JSON Y EVENTOS EN INDEX.HTML
     // ==========================================
     if (grillaObras) {
-        fetch("datos/obras.json")
-            .then(res => res.json())
-            .then(obras => {
-                todasLasObras = obras;
-                renderizarObras(todasLasObras);
-                inicializarCarruselFunciones(todasLasObras);
-            })
-            .catch(err => console.error("Error al cargar datos/obras.json:", err));
+    fetch("datos/obras.json")
+        .then(res => res.json())
+        .then(obras => {
+            const obrasAdmin = JSON.parse(localStorage.getItem("obrasAdmin")) || [];
+            todasLasObras = [...obras, ...obrasAdmin];
+            renderizarObras(todasLasObras);
+            inicializarCarruselFunciones(todasLasObras);
+        })
+        .catch(err => console.error("Error al cargar datos/obras.json:", err));
+            
 
         if (inputBuscar) inputBuscar.addEventListener("input", filtrarObras);
         if (selectCategoria) selectCategoria.addEventListener("change", filtrarObras);
@@ -251,7 +253,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (tarjeta) {
                 window.location.href = tarjeta.dataset.url;
             }
+            
         });
+        
     }
 
     // ==========================================
