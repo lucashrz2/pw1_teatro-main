@@ -67,6 +67,69 @@
         </div>
     </main>
 
+    <!-- Modal de Pago / Checkout -->
+    <div id="modal-pago" class="modal-checkout-overlay" style="display: none;">
+        <div class="modal-checkout-caja">
+            <button type="button" id="btn-cerrar-modal" class="btn-cerrar-modal" aria-label="Cerrar">&times;</button>
+
+            <!-- Paso 1: Formulario -->
+            <div id="paso-formulario">
+                <h2>Finalizar Pago</h2>
+                <p class="subtitulo-modal">Total a pagar: <strong id="total-modal">$ 0 ARS</strong></p>
+
+                <button type="button" id="btn-datos-prueba" class="btn-datos-prueba">
+                    Rellenar datos de prueba
+                </button>
+
+                <form id="form-checkout" class="form-checkout">
+                    <div class="campo-checkout">
+                        <label for="nombre">Nombre y apellido</label>
+                        <input type="text" id="nombre" required placeholder="Ej: Lucas Hruza">
+                    </div>
+
+                    <div class="campo-checkout">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" required placeholder="ejemplo@correo.com">
+                    </div>
+
+                    <div class="campo-checkout">
+                        <label for="tarjeta">Número de tarjeta</label>
+                        <input type="text" id="tarjeta" maxlength="19" required placeholder="4509 1234 5678 9012">
+                    </div>
+
+                    <div class="fila-checkout">
+                        <div class="campo-checkout">
+                            <label for="vencimiento">Vencimiento</label>
+                            <input type="text" id="vencimiento" maxlength="5" required placeholder="MM/AA">
+                        </div>
+
+                        <div class="campo-checkout">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" maxlength="4" required placeholder="123">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-confirmar-pago">Confirmar Pago</button>
+                </form>
+            </div>
+
+            <!-- Paso 2: Procesando -->
+            <div id="paso-cargando" class="estado-checkout" style="display: none;">
+                <div class="spinner-checkout"></div>
+                <p>Procesando tu pago...</p>
+            </div>
+
+            <!-- Paso 3: Éxito -->
+            <div id="paso-exito" class="estado-checkout" style="display: none;">
+                <div class="icono-exito-checkout">✓</div>
+                <h3>¡Pago procesado con éxito!</h3>
+                <p>Enviamos el comprobante y tus entradas a <strong id="correo-confirmado"></strong>.</p>
+                <button type="button" id="btn-aceptar-exito" class="btn-confirmar-pago">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
     <script src="carrito.js"></script>
+    <script src="checkout.js"></script>
 </body>
 </html>

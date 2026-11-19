@@ -525,11 +525,33 @@ body.modo-claro .mini-stat {
     color: var (--color-primario);
 }
 
+/* Etiquetas de estadísticas (Favoritos / En carrito) */
 .stat-label {
     font-size: 0.75rem;
     color: #ffffff;
 }
 
+body.modo-claro .stat-label,
+body.light-mode .stat-label,
+body.tema-claro .stat-label {
+    color: #000000;
+}
+
+/* Alineación de íconos y texto en la barra lateral */
+.barra-lateral-cuenta ul li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Contraste de paneles y textos en modo claro */
+body.modo-claro .barra-lateral-cuenta,
+body.modo-claro .contenido-cuenta section,
+body.modo-claro .banner-perfil {
+    background-color: #ffffff;
+    color: #172b4d;
+    border-color: #d8d2e7;
+}
 /* Formulario en 2 columnas para aprovechar el ancho */
 .form-dos-columnas {
     display: grid;

@@ -97,6 +97,7 @@ body.modo-claro .navegacion-principal a:hover {
 .navegacion-principal ul {
     display: flex;
     gap: 22px;
+    content: center;
 }
 
 .navegacion-principal a {
@@ -108,6 +109,13 @@ body.modo-claro .navegacion-principal a:hover {
 
 .navegacion-principal a:hover {
     color: var(--color-primario);
+}
+body.modo-claro .navegacion-principal a {
+    color: #0b0e14;
+}
+
+body.modo-claro .contenedor-hero .navegacion-principal a {
+    color: #ffffff;
 }
 
 /* ==========================================================================
@@ -149,7 +157,6 @@ body.modo-claro .boton-tema:hover {
 }
 .contenedor-pildora-auth {
     background-color: var(--color-primario);
-    padding: 3px 4px;
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -157,6 +164,31 @@ body.modo-claro .boton-tema:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+/* 3ra imagen: píldora compacta cuando solo está el ícono de perfil activo */
+.contenedor-pildora-auth:has(.boton-perfil-activo) {
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.contenedor-pildora-auth .boton-perfil-activo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px; /* Ajustá este valor si querés el círculo un poco más chico o grande */
+}
+
+.icono-usuario-header img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    display: block;
+}
+
+/* 2da imagen: cuando tiene los enlaces de "Iniciar sesión" / "Crear cuenta" */
+.contenedor-pildora-auth:has(.boton-ingreso),
+.contenedor-pildora-auth:has(.boton-registro) {
+    padding: 6px 10px;
+}
 .boton-ingreso {
     background-color: #0b0e14;
     color: #ffffff;

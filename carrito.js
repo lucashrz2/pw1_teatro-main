@@ -173,19 +173,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Finalizar compra
-    const btnFinalizar = document.getElementById("btn-finalizar-compra");
-    if (btnFinalizar) {
-        btnFinalizar.addEventListener("click", () => {
-            if (obtenerCarrito().length === 0) {
-                mostrarNotificacionCarrito("Agregá al menos una entrada antes de comprar.");
-                return;
-            }
-            guardarCarrito([]);
-            renderizarCarrito();
-            mostrarNotificacionCarrito("¡Compra realizada con éxito! Revisá tus entradas.");
-        });
-    }
-
+    // El modal de checkout (checkout.js) maneja el clic en #btn-finalizar-compra
     renderizarCarrito();
 });
